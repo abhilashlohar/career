@@ -97,9 +97,9 @@ class CorporateUsersController extends AppController
         if ($this->request->is('post')) {
             $corporateUser = $this->CorporateUsers->patchEntity($corporateUser, $this->request->getData());
             if ($this->CorporateUsers->save($corporateUser)) {
-                $this->Flash->success(__('The corporate user has been saved.'));
+                $this->Flash->success(__('You have successfully registered.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('The corporate user could not be saved. Please, try again.'));
         }

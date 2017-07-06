@@ -22,7 +22,7 @@ data-animsition-out="fade-out">
 		  <label class="sr-only" for="inputName">Password</label>
 		  <?php echo $this->Form->control('password',['class'=>'form-control','placeholder'=>'Password','label'=>false]); ?>
 		</div>
-		<?= $this->Form->button(__('Login'),['class'=>'btn btn-primary btn-block','id'=>'validateButton2']) ?>
+		<?= $this->Form->button(__('Login'),['class'=>'btn btn-primary btn-block']) ?>
 	  <?= $this->Form->end() ?>
 		<p>Still no account? Please go to <?php echo $this->Html->link('Register', array('controller' => 'CorporateUsers', 'action' => 'add'));  ?></p>
 		
