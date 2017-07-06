@@ -58,9 +58,17 @@ class AppController extends Controller
                       'userModel' => 'CorporateUsers'
                 ]
             ],
+			'loginAction' => [
+				'controller' => 'CorporateUsers',
+				'action' => 'login'
+			],
+			'loginRedirect' => [
+                'controller' => 'CorporateUsers',
+                'action' => 'index',
+            ],
             'logoutRedirect' => [
                 'controller' => 'CorporateUsers',
-                'action' => 'login',
+                'action' => 'login'
             ],
 			'unauthorizedRedirect' => $this->referer(),
         ]);

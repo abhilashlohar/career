@@ -21,7 +21,7 @@ class CorporateUsersController extends AppController
 	public function initialize()
 	{
 		parent::initialize();
-		$this->Auth->allow(['logout', 'index']);
+		$this->Auth->allow(['logout']);
 	}
 	public function beforeFilter(Event $event)
     {
