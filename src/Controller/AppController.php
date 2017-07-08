@@ -47,8 +47,37 @@ class AppController extends Controller
 		
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-
+		
+		if($this->request->params['controller'] == 'JobSeekers' or  $this->request->params['controller'] == 'job-seekers' or  $this->request->params['controller'] == 'job_seekers') 
+		{
 		$this->loadComponent('Auth', [
+		 'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'email',
+                        'password' => 'password'
+                    ],
+                      'userModel' => 'JobSeekers'
+                ]
+            ],
+			'loginAction' => [
+				'controller' => 'JobSeekers',
+				'action' => 'login'
+			],
+			'loginRedirect' => [
+                'controller' => 'JobSeekers',
+                'action' => 'index',
+            ],
+            'logoutRedirect' => [
+                'controller' => 'JobSeekers',
+                'action' => 'login'
+            ],
+			'unauthorizedRedirect' => $this->referer(),
+        ]);
+		}
+		else
+		{
+			$this->loadComponent('Auth', [
 		 'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -72,6 +101,7 @@ class AppController extends Controller
             ],
 			'unauthorizedRedirect' => $this->referer(),
         ]);
+		}
         /*
          * Enable the following components for recommended CakePHP security settings.
          * see http://book.cakephp.org/3.0/en/controllers/components/security.html
