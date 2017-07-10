@@ -121,6 +121,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   
   <!-- Scripts For This Page validation -->
   <?= $this->fetch('scriptBottom')?>
+  <?= $this->fetch('scriptJobSeekeersAdd')?>
   
   <script>
     (function(document, window, $) {

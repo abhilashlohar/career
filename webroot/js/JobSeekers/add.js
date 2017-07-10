@@ -3,9 +3,14 @@
   var Site = window.Site;
   $(document).ready(function($) {
     Site.run();
-  });
-
- 
+  }); alert();
+	
+		$('button[name="formSubmit"]').on('click',function(){
+			alert();
+			$('#registrationForm').submit();
+		});
+	
+ /* 
   // Example Validataion Standard Mode
   // ---------------------------------
   (function() {
@@ -53,5 +58,5 @@
         }
       }
     });
-  })();
+  })(); */
 })(document, window, jQuery);

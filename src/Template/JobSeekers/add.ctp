@@ -148,6 +148,7 @@
 											<?php echo $this->Form->control('job_profile',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
 										</div>
 									</div>
+									
 							</div>
 						</div>
 					<!-- End Wizard Content -->
@@ -162,7 +163,7 @@
 </div>
   <!-- End Page -->
 <?php echo $this->Html->css('/assets/vendor/jquery-wizard/jquery-wizard.css', ['block' => 'cssWizard']); ?>
-<?php //echo $this->Html->script('/js/JobSeekers/add.js', ['block' => 'scriptJobSeekeersAdd']); ?>
+<?php echo $this->Html->script('/js/JobSeekers/add.js', ['block' => 'scriptJobSeekeersAdd']); ?>
 <?php //echo $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js', ['block' => 'scriptWizard1']); ?>
 <?php echo $this->Html->script('/assets/vendor/jquery-wizard/jquery-wizard.js', ['block' => 'scriptWizard1']); ?>
 <?php echo $this->Html->script('/assets/js/components/jquery-wizard.js', ['block' => 'scriptWizard2']); ?>
