@@ -3,7 +3,7 @@
   var Site = window.Site;
   $(document).ready(function($) {
     Site.run();
-  }); alert();
+  }); 
 	
 		$('button[name="formSubmit"]').on('click',function(){
 			alert();
