@@ -4,7 +4,21 @@
   $(document).ready(function($) {
     Site.run();
   }); 
- 
+  // init the wizard
+   /*  var defaults = $.components.getDefaults("wizard");
+    var options = $.extend(true, {}, defaults, {
+      buttonsAppendTo: '.panel-body'
+    });
+
+    var wizard = $("#exampleWizardForm").wizard(options).data('wizard');
+	wizard.get("#exampleAccount").setValidator(function() {
+      
+      if ($('#inputName')[0].checkValidity()==false) {
+        return false;
+      }
+
+      return true;
+    }); */
 /*   var dd=$('#inputName')[0].checkValidity();
 	$(document).on('click','a[data-wizard="next"]',function(e){
 		var dd=$('#inputName')[0].checkValidity();

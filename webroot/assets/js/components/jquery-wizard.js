@@ -13,7 +13,7 @@ $.components.register("wizard", {
 		
         return '<div class="wizard-buttons">' +
           '<a class="btn btn-default btn-outline" href="#' + this.id + '" data-wizard="back" role="button">' + options.buttonLabels.back + '</a>' +
-          '<a class="btn btn-primary btn-outline pull-right" href="#' + this.id + '" data-wizard="next" role="button">' + options.buttonLabels.next + '</a>' +
+          '<a class="btn btn-success btn-outline pull-right" href="#' + this.id + '" data-wizard="next" role="button">' + options.buttonLabels.next + '</a>' +
           '<button class="btn btn-success btn-outline pull-right" data-wizard="finish" role="button" type="submit" name="formSubmit">' + options.buttonLabels.finish + '</button>' +
           '</div>';
       }

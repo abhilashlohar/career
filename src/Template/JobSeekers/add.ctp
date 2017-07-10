@@ -1,7 +1,17 @@
 <style>
-.page-dark.layout-full {
-    color: #76838f !important;
+.panel-title,.pearl-title,.page-dark.layout-full {
+    color: #FFF !important;
 }
+.form-control {
+border:1px solid #FFF !important;
+}
+.trans{
+	background-color: #FFF0 !important;
+}
+table td,th {
+    color: #FFF !important;
+}
+
 </style>
 <?php $this->set('title', 'Registrations'); ?>
 
@@ -9,13 +19,13 @@
 
 <div class="page animsition">
 	<div class="page-content container-fluid">
-		<div class="row">
+		<div class="row trans">
 		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 80% !important;','type'=>'file']) ?>
-			<div class="col-md-12">
+			<div class="col-md-12 trans" style="opacity: 0.8;">
 			<!-- Panel Wizard Form -->
-				<div class="panel" id="exampleWizardForm">
+				<div class="panel trans" id="exampleWizardForm">
 					<div class="panel-heading">
-					  <h3 class="panel-title">Wizard Form</h3>
+					  <h3 class="panel-title">Job Profile</h3>
 					</div>
 					<div class="panel-body">
 						<!-- Steps -->
