@@ -10,7 +10,7 @@
 <div class="page animsition">
 	<div class="page-content container-fluid">
 		<div class="row">
-		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 900px !important;','type'=>'file']) ?>
+		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 80% !important;','type'=>'file']) ?>
 			<div class="col-md-12">
 			<!-- Panel Wizard Form -->
 				<div class="panel" id="exampleWizardForm">

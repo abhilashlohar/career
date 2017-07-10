@@ -4,9 +4,20 @@
   $(document).ready(function($) {
     Site.run();
   }); 
-	
-		
-	
+ 
+/*   var dd=$('#inputName')[0].checkValidity();
+	$(document).on('click','a[data-wizard="next"]',function(e){
+		var dd=$('#inputName')[0].checkValidity();
+		//alert(dd);
+	}); */
+	/* 	var $myForm = $('#registrationForm');
+$('#inputName')[0].checkValidity();
+		if(! $myForm[0].checkValidity()) {
+		  // If the form is invalid, submit it. The form won't actually submit;
+		  // this will just cause the browser to display the native HTML5 error messages.
+		   $myForm.find(':submit').click();
+		}
+	 */
  /* 
   // Example Validataion Standard Mode
   // ---------------------------------
