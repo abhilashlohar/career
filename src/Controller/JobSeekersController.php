@@ -1,5 +1,7 @@
 <?php
 namespace App\Controller;
+use Cake\Filesystem\Folder;
+use Cake\Filesystem\File;
 use App\Controller\AppController;
 use Cake\Event\Event;
 use Cake\View\View;
@@ -91,10 +93,18 @@ class JobSeekersController extends AppController
 		$this->viewBuilder()->layout('signup');
         $jobSeeker = $this->JobSeekers->newEntity();
         if ($this->request->is('post')) {
-			pr($this->request->getData());
-			exit;
+			$files=$this->request->data['profile_document'];
+			$this->request->data['profile_document']=$files['name'];
             $jobSeeker = $this->JobSeekers->patchEntity($jobSeeker, $this->request->getData());
-            if ($this->JobSeekers->save($jobSeeker)) {
+            if ($job_seeker_data=$this->JobSeekers->save($jobSeeker)) {
+				
+				$job_seeker_id=$job_seeker_data->id; 
+				
+				$dir = new Folder(WWW_ROOT . 'img/jobseeker/'.$job_seeker_id, true, 0755);
+				$file_path = str_replace("\\","/",WWW_ROOT).'img/jobseeker/'.$job_seeker_id;
+				
+					move_uploaded_file($files['tmp_name'], $file_path.'/' . $files['name']);
+				
                 $this->Flash->success(__('The job seeker has been saved.'));
 
                 return $this->redirect(['action' => 'index']);

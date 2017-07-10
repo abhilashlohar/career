@@ -10,7 +10,7 @@
 <div class="page animsition">
 	<div class="page-content container-fluid">
 		<div class="row">
-		<?= $this->Form->create($jobSeeker,['role'=>'form','id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 900px !important;','type'=>'file']) ?>
+		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 900px !important;','type'=>'file']) ?>
 			<div class="col-md-12">
 			<!-- Panel Wizard Form -->
 				<div class="panel" id="exampleWizardForm">
@@ -55,7 +55,7 @@
 									<div class="form-group">
 										<label class="col-sm-4 control-label" for="inputUserName">Email</label>
 										<div class="col-sm-5">
-											<?php echo $this->Form->control('email',['class'=>'form-control','placeholder'=>'Email.','label'=>false,'required'=>'required','id'=>'inputEmail']); ?>
+											<?php echo $this->Form->control('email',['class'=>'form-control','placeholder'=>'Email','label'=>false,'required'=>'required','id'=>'inputEmail']); ?>
 										</div>
 									</div>
 									<div class="form-group">
@@ -89,11 +89,11 @@
 									<tbody>
 									<tr>
 									<td>PG<?php echo $this->Form->control('job_seeker_rows[0][degree_type]',['label'=>false,'type'=>'hidden','value'=>'PG']); ?></td>
-									<td><?php echo $this->Form->control('job_seeker_rows[0][degree_name]',['class'=>'form-control','placeholder'=>'Degree Name','label'=>false]); ?></td>
-									<td><?php echo $this->Form->control('job_seeker_rows[0][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false]); ?></td>
-									<td><?php echo $this->Form->control('job_seeker_rows[0][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false]); ?></td>
-									<td><?php echo $this->Form->control('job_seeker_rows[0][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false]); ?></td>
-									<td><?php echo $this->Form->control('job_seeker_rows[0][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false]); ?></td>
+									<td><?php echo $this->Form->control('job_seeker_rows[0][degree_name]',['class'=>'form-control','placeholder'=>'Degree Name','label'=>false,'required'=>'required']); ?></td>
+									<td><?php echo $this->Form->control('job_seeker_rows[0][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false,'required'=>'required']); ?></td>
+									<td><?php echo $this->Form->control('job_seeker_rows[0][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false,'required'=>'required']); ?></td>
+									<td><?php echo $this->Form->control('job_seeker_rows[0][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false,'required'=>'required']); ?></td>
+									<td><?php echo $this->Form->control('job_seeker_rows[0][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false,'required'=>'required']); ?></td>
 									</tr>
 									<tr>
 									<td>Degree<?php echo $this->Form->control('job_seeker_rows[1][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Degree']); ?></td>
@@ -145,7 +145,7 @@
 									<div class="form-group">
 										<label class="col-sm-4 control-label" for="inputUserName">Profile Document</label>
 										<div class="col-sm-5">
-											<?php echo $this->Form->control('job_profile',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
+											<?php echo $this->Form->control('profile_document',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
 										</div>
 									</div>
 									

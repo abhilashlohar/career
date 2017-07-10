@@ -5,10 +5,7 @@
     Site.run();
   }); 
 	
-		$('button[name="formSubmit"]').on('click',function(){
-			alert();
-			$('#registrationForm').submit();
-		});
+		
 	
  /* 
   // Example Validataion Standard Mode
