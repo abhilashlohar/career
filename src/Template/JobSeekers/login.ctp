@@ -44,4 +44,4 @@ data-animsition-out="fade-out">
 	</div>
 </div>
 <!-- End Page -->
-<?php echo $this->Html->script('/js/CorporateUsers/login.js', ['block' => 'scriptBottom']); ?>
+<?php echo $this->Html->script('/js/JobSeekers/login.js', ['block' => 'scriptBottom']); ?>

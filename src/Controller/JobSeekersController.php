@@ -91,6 +91,8 @@ class JobSeekersController extends AppController
 		$this->viewBuilder()->layout('signup');
         $jobSeeker = $this->JobSeekers->newEntity();
         if ($this->request->is('post')) {
+			pr($this->request->getData());
+			exit;
             $jobSeeker = $this->JobSeekers->patchEntity($jobSeeker, $this->request->getData());
             if ($this->JobSeekers->save($jobSeeker)) {
                 $this->Flash->success(__('The job seeker has been saved.'));

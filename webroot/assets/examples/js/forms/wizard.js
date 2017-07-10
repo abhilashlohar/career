@@ -86,7 +86,7 @@
 
     // setup validator
     // http://formvalidation.io/api/#is-valid
-    wizard.get("#exampleAccount").setValidator(function() {
+    /*wizard.get("#exampleAccount").setValidator(function() {
       var fv = $("#exampleAccountForm").data('formValidation');
       fv.validate();
 
@@ -106,7 +106,7 @@
       }
 
       return true;
-    });
+    });*/
   })();
 
 

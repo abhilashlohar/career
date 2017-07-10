@@ -38,13 +38,10 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?php echo $this->Html->css('/assets/vendor/intro-js/introjs.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/slidepanel/slidePanel.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/flag-icon-css/flag-icon.css'); ?>
-	
-	<!-- Plugins For This Page -->
-	<!-- Form Wizard  --->
-	<?php echo $this->Html->css('/assets/vendor/jquery-wizard/jquery-wizard.css'); ?>
-	<!-- End Form Wizard  --->
-	<?php echo $this->Html->css('/assets/vendor/formvalidation/formValidation.css'); ?>
+
 	<!-- Plugins For This Page validation-->
+	<?= $this->fetch('cssWizard')?>
+	<?php echo $this->Html->css('/assets/vendor/formvalidation/formValidation.css'); ?>
 	
 	<!-- Page -->
 	<?php echo $this->Html->css('/assets/examples/css/pages/register.css'); ?>
@@ -99,11 +96,9 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   <!-- Plugins For This Page validation -->
   <?php echo $this->Html->script('/assets/vendor/formvalidation/formValidation.min.js'); ?>
   <?php echo $this->Html->script('/assets/vendor/formvalidation/framework/bootstrap.min.js'); ?>
- <!-- Form Wizard  --->
-  <?php echo $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js'); ?>
-  <?php echo $this->Html->script('/assets/vendor/jquery-wizard/jquery-wizard.js'); ?>
-	<!-- End Form Wizard  --->
+
   <!-- Scripts -->
+   <?= $this->fetch('scriptWizard1')?>
   <?php echo $this->Html->script('/assets/js/core.js'); ?>
   <?php echo $this->Html->script('/assets/js/site.js'); ?>
 
@@ -119,19 +114,14 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
   <?php echo $this->Html->script('/assets/js/components/animsition.js'); ?>
   <?php echo $this->Html->script('/assets/js/components/slidepanel.js'); ?>
   <?php echo $this->Html->script('/assets/js/components/switchery.js'); ?>
- <!-- Form Wizard  --->
-  <?php echo $this->Html->script('/assets/js/components/jquery-wizard.js'); ?>
-  <?php echo $this->Html->script('/assets/js/components/matchheight.js'); ?>
-  <?php echo $this->Html->script('/assets/examples/js/forms/wizard.js'); ?>
-  <!-- End Form Wizard  --->
+  <?= $this->fetch('scriptWizard2')?>
   <!-- Scripts For This Page -->
   <?php echo $this->Html->script('/assets/js/components/jquery-placeholder.js'); ?>
   <?php echo $this->Html->script('/assets/js/components/animate-list.js'); ?>
   
-  
-  
   <!-- Scripts For This Page validation -->
   <?= $this->fetch('scriptBottom')?>
+  
   <script>
     (function(document, window, $) {
       'use strict';
