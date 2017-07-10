@@ -35,7 +35,7 @@ data-animsition-out="fade-out">
 		  <label class="sr-only" for="inputName">Retype Password</label>
 		  <?php echo $this->Form->control('retype_password',['type'=>'password','class'=>'form-control','placeholder'=>'Retype Password','label'=>false,'data-fv-notempty'=>'true','data-fv-notempty-message'=>'The confirm password is required and cannot be empty','data-fv-identical'=>'true','data-fv-identical-field'=>'password','data-fv-identical-message'=>'The password and its confirm are not the same']); ?>
 		</div>
-		<?= $this->Form->button(__('Register'),['class'=>'btn btn-primary btn-block']) ?>
+		<?= $this->Form->button(__('Register'),['class'=>'btn btn-primary btn-block','id'=>'validateButton2']) ?>
 	  <?= $this->Form->end() ?>
 	  <p>Have account already? Please go to <?php echo $this->Html->link('Sign In', array('controller' => 'CorporateUsers', 'action' => 'login'));  ?></p>
 
