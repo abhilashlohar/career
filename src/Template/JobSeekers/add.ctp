@@ -3,11 +3,11 @@
     color: #FFF !important;
 }
 .form-control {
-border:1px solid #FFF !important;
+	border:1px solid #FFF !important;
 }
 .trans{
-	background-color: #0009 !important;
-border-radius: 20px;
+	background-color: -webkit(#0009 !important);
+	border-radius: 20px;
 }
 .accordian-trans{
 	background-color: #0000 !important;
