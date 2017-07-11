@@ -4,34 +4,45 @@
   $(document).ready(function($) {
     Site.run();
   }); 
-  // init the wizard
-   /*  var defaults = $.components.getDefaults("wizard");
-    var options = $.extend(true, {}, defaults, {
-      buttonsAppendTo: '.panel-body'
-    });
-
-    var wizard = $("#exampleWizardForm").wizard(options).data('wizard');
-	wizard.get("#exampleAccount").setValidator(function() {
-      
-      if ($('#inputName')[0].checkValidity()==false) {
-        return false;
-      }
-
-      return true;
-    }); */
-/*   var dd=$('#inputName')[0].checkValidity();
-	$(document).on('click','a[data-wizard="next"]',function(e){
-		var dd=$('#inputName')[0].checkValidity();
-		//alert(dd);
-	}); */
-	/* 	var $myForm = $('#registrationForm');
-$('#inputName')[0].checkValidity();
-		if(! $myForm[0].checkValidity()) {
-		  // If the form is invalid, submit it. The form won't actually submit;
-		  // this will just cause the browser to display the native HTML5 error messages.
-		   $myForm.find(':submit').click();
-		}
-	 */
+  
+  $(document).on('click','#first_step',function(e){
+	$("#last_step").click();
+	 var inputName=$('#inputName')[0].checkValidity();
+	 var inputMobileNo=$('#inputMobileNo')[0].checkValidity();
+	 var inputEmail=$('#inputEmail')[0].checkValidity();
+	 var inputPassword=$('#inputPassword')[0].checkValidity();
+	 var inputPasswordConfirm=$('#inputPasswordConfirm')[0].checkValidity();
+	 if(inputName && inputMobileNo && inputEmail && inputPassword && inputPasswordConfirm)
+	 { 
+		 $('#personal_info').removeClass('active');
+		 $('.first_step').removeClass('current');
+		 $('.first_step').addClass('done');
+		 $('.second_step').removeClass('disabled');
+		 $('.second_step').addClass('current');
+		 $('#academic_info').addClass('active');
+	 }
+  });
+  $(document).on('click','#second_step',function(e){
+	 $("#last_step").click();
+	 var ten_institute_name=$('#10_institute_name')[0].checkValidity();
+	 var ten_location=$('#10_location')[0].checkValidity();
+	 var ten_percentage_cgpa=$('#10_percentage_cgpa')[0].checkValidity();
+	 var ten_passed_out_year=$('#10_passed_out_year')[0].checkValidity();
+	 var twel_institute_name=$('#12_institute_name')[0].checkValidity();
+	 var twel_location=$('#12_location')[0].checkValidity();
+	 var twel_percentage_cgpa=$('#12_percentage_cgpa')[0].checkValidity();
+	 var twel_passed_out_year=$('#12_passed_out_year')[0].checkValidity();
+	if(ten_institute_name && ten_location && ten_percentage_cgpa && ten_passed_out_year && twel_institute_name && twel_location && twel_percentage_cgpa && twel_passed_out_year)
+	 {
+		 $('#academic_info').removeClass('active');
+		 $('.second_step').removeClass('current');
+		 $('.second_step').addClass('done');
+		 $('.last_step').removeClass('disabled');
+		 $('.last_step').addClass('current');
+		 $('#job_info').addClass('active');
+	 }
+  });
+  
  /* 
   // Example Validataion Standard Mode
   // ---------------------------------

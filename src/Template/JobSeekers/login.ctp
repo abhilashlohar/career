@@ -2,16 +2,20 @@
 .help-block{
 	color:#FFF !important;
 }
+.page-content{
+background: #0009;
+border-radius: 20px;
+}
+
 </style>
 <?php $this->set('title', 'Login'); ?>
 <div class="page animsition vertical-align text-center" data-animsition-in="fade-in"
 data-animsition-out="fade-out">
 	<div class="page-content vertical-align-middle">
 	  <div class="brand">
-		<?php echo $this->Html->image('/img/logo.png'); ?>
+		<?php echo $this->Html->image('/img/logo.png',['style'=>'height: 42px;']); ?>
 		<h2 class="brand-text">Entry Hires</h2>
 	  </div>
-	  <p>Login</p>
 	  <?= $this->Flash->render() ?>
 	  <?= $this->Form->create(@$login,['role'=>'form','id'=>'loginform']) ?>  
 		<div class="form-group">
@@ -22,13 +26,12 @@ data-animsition-out="fade-out">
 		  <label class="sr-only" for="inputName">Password</label>
 		  <?php echo $this->Form->control('password',['class'=>'form-control','placeholder'=>'Password','label'=>false]); ?>
 		</div>
-		<?= $this->Form->button(__('Login'),['class'=>'btn btn-primary btn-block']) ?>
+		<?= $this->Form->button(__('Login'),['class'=>'btn btn-gradient btn-block']) ?>
 	  <?= $this->Form->end() ?>
 		<p>Still no account? Please go to <?php echo $this->Html->link('Register', array('controller' => 'JobSeekers', 'action' => 'add'));  ?></p>
 		
 	  <footer class="page-copyright page-copyright-inverse">
-		<p>WEBSITE BY amazingSurge</p>
-		<p>© 2015. All RIGHT RESERVED.</p>
+		<p>© 2017 Entry Hires.</p>
 		<div class="social">
 		  <a href="javascript:void(0)">
 			<i class="icon bd-twitter" aria-hidden="true"></i>

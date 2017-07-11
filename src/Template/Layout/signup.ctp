@@ -30,6 +30,8 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	<?php echo $this->Html->css('/assets/css/bootstrap.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/bootstrap-extend.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/site.min.css'); ?>
+	<?php echo $this->Html->css('/css/style.css'); ?>
+	<?php echo $this->Html->css('/assets/skins/pink.css'); ?>
 
 	<!-- Plugins -->
 	<?php echo $this->Html->css('/assets/vendor/animsition/animsition.css'); ?>
@@ -48,6 +50,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 	
 	<!-- Fonts -->
 	<?php echo $this->Html->css('/assets/fonts/web-icons/web-icons.min.css'); ?>
+	<?php echo $this->Html->css('/assets/examples/css/uikit/icon.css'); ?>
 	<?php echo $this->Html->css('/assets/fonts/brand-icons/brand-icons.min.css'); ?>
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
