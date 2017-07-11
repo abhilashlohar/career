@@ -52,7 +52,7 @@ class JobSeekersTable extends Table
         $validator
             ->integer('id')
             ->allowEmpty('id', 'create');
-/* 
+
         $validator
             ->email('email')
             ->requirePresence('email', 'create')
@@ -86,10 +86,7 @@ class JobSeekersTable extends Table
             ->requirePresence('profile_document', 'create')
             ->notEmpty('profile_document');
 
-        $validator
-            ->dateTime('created_on')
-            ->requirePresence('created_on', 'create')
-            ->notEmpty('created_on'); */
+         
 
         return $validator;
     }

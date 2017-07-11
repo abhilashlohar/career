@@ -5,9 +5,37 @@
     Site.run();
   }); 
   
+  $(document).on('submit','#registrationForm',function(e){
+	  var check_degree='';
+	 $(".degree").each(function(){
+		 
+		 if($(this).val()!='')
+		 {
+			check_degree='data';
+		 }
+	 });
+	 if(check_degree=='')
+	 {
+		  $(".degree").prop('disabled','disabled');
+		  $(".degree_type").prop('disabled','disabled');
+	 }
+	 var check_pg='';
+	 $(".pg").each(function(){
+		 
+		 if($(this).val()!='')
+		 {
+			check_pg='data';
+		 }
+	 });
+	 if(check_pg=='')
+	 {
+		  $(".pg").prop('disabled','disabled');
+		  $(".pg_type").prop('disabled','disabled');
+	 }
+  });
   $(document).on('click','#first_step',function(e){
 	$("#last_step").click();
-	 var inputName=$('#inputName')[0].checkValidity();
+	  var inputName=$('#inputName')[0].checkValidity();
 	 var inputMobileNo=$('#inputMobileNo')[0].checkValidity();
 	 var inputEmail=$('#inputEmail')[0].checkValidity();
 	 var inputPassword=$('#inputPassword')[0].checkValidity();
@@ -20,10 +48,11 @@
 		 $('.second_step').removeClass('disabled');
 		 $('.second_step').addClass('current');
 		 $('#academic_info').addClass('active');
-	 }
+	 } 
   });
   $(document).on('click','#second_step',function(e){
 	 $("#last_step").click();
+	 
 	 var ten_institute_name=$('#10_institute_name')[0].checkValidity();
 	 var ten_location=$('#10_location')[0].checkValidity();
 	 var ten_percentage_cgpa=$('#10_percentage_cgpa')[0].checkValidity();
@@ -40,9 +69,33 @@
 		 $('.last_step').removeClass('disabled');
 		 $('.last_step').addClass('current');
 		 $('#job_info').addClass('active');
-	 }
+	 } 
+	 
   });
-  
+  $(document).on('click','#second_step_back',function(e){
+	 
+	 $('#academic_info').removeClass('active');
+	 $('.second_step').removeClass('current');
+	 $('.second_step').removeClass('done');
+	 $('.second_step').addClass('disabled');
+	 $('.first_step').removeClass('disabled');
+	 $('.first_step').addClass('current');
+	 $('#personal_info').addClass('active');
+	 
+	
+  });
+   $(document).on('click','#last_step_back',function(e){
+	 
+	 $('#job_info').removeClass('active');
+	 $('.last_step').removeClass('current');
+	 $('.last_step').removeClass('done');
+	 $('.last_step').addClass('disabled');
+	 $('.second_step').removeClass('disabled');
+	 $('.second_step').addClass('current');
+	 $('#academic_info').addClass('active');
+	 
+	
+  });
  /* 
   // Example Validataion Standard Mode
   // ---------------------------------

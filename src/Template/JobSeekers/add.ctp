@@ -6,11 +6,11 @@
 border:1px solid #FFF !important;
 }
 .trans{
-	background: #0009;
+	background-color: #0009 !important;
 border-radius: 20px;
 }
 .accordian-trans{
-	background: #0000;
+	background-color: #0000 !important;
 	border:1px solid #FFF;
 }
 table td,th {
@@ -58,6 +58,7 @@ table td,th {
 <div class="page animsition">
 	<div class="page-content container-fluid">
 		<div class="row">
+		<?= $this->Flash->render() ?>
 		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 80% !important;','type'=>'file']) ?>
 			<div class="col-md-12">
 			<!-- Panel Wizard Form -->
@@ -192,20 +193,20 @@ table td,th {
 											  <div class="panel-body">
 												<div class="form-group">
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Intermediate','class'=>'']); ?>
-													<?php echo $this->Form->control('job_seeker_rows[2][degree_name]',['class'=>'form-control','placeholder'=>'Degree Name','label'=>false,'id'=>'degree_degree_name']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Degree','class'=>'degree_type']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][degree_name]',['class'=>'form-control degree','placeholder'=>'Degree Name','label'=>false,'id'=>'degree_degree_name']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][institute_name]',['class'=>'form-control degree','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false,'id'=>'degree_location']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control degree','placeholder'=>'Location','label'=>false,'id'=>'degree_location']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'degree_percentage_cgpa']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][percentage_cgpa]',['class'=>'form-control degree','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'degree_percentage_cgpa']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false,'id'=>'degree_passed_out_year']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][passed_out_year]',['class'=>'form-control degree','placeholder'=>'Passed Out Year','label'=>false,'id'=>'degree_passed_out_year']); ?>
 													</div>
 												</div>
 											  </div>
@@ -224,20 +225,20 @@ table td,th {
 											  <div class="panel-body">
 												<div class="form-group">
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[3][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Intermediate','class'=>'']); ?>
-													<?php echo $this->Form->control('job_seeker_rows[3][degree_name]',['class'=>'form-control','placeholder'=>'Degree Name','label'=>false,'id'=>'pg_degree_name']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[3][degree_type]',['label'=>false,'type'=>'hidden','value'=>'PG','class'=>'pg_type']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[3][degree_name]',['class'=>'form-control pg','placeholder'=>'Degree Name','label'=>false,'id'=>'pg_degree_name']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[3][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[3][institute_name]',['class'=>'form-control pg','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false,'id'=>'pf_location']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control pg','placeholder'=>'Location','label'=>false,'id'=>'pf_location']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[3][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'pg_percentage_cgpa']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[3][percentage_cgpa]',['class'=>'form-control pg','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'pg_percentage_cgpa']); ?>
 													</div>
 													<div class="col-md-3 margin">
-													<?php echo $this->Form->control('job_seeker_rows[3][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false,'id'=>'pg_passed_out_year']); ?>
+													<?php echo $this->Form->control('job_seeker_rows[3][passed_out_year]',['class'=>'form-control pg','placeholder'=>'Passed Out Year','label'=>false,'id'=>'pg_passed_out_year']); ?>
 													</div>
 												</div>
 											  </div>
@@ -251,28 +252,25 @@ table td,th {
 								<?= $this->Form->button(__('Next'),['class'=>'btn btn-gradient pull-right','type'=>'button','id'=>'second_step']) ?>
 								<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left','type'=>'button','id'=>'second_step_back']) ?>
 							</div>
-							<div class="wizard-pane" id="exampleGetting" role="tabpanel">
+							<div class="wizard-pane col-md-4 col-sm-offset-4 " id="job_info" role="tabpanel">
 								<div class="form-group">
-										<div class="col-sm-5">
-											<?php echo $this->Form->control('located_city',['class'=>'form-control','placeholder'=>'Located City','label'=>false,'required'=>'required']); ?>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-5">
-											<?php echo $this->Form->control('skill_set',['class'=>'form-control','placeholder'=>'Skill Set','label'=>false,'required'=>'required']); ?>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-5">
-											<?php echo $this->Form->control('job_profile',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required']); ?>
-										</div>
-									</div>
-									<div class="form-group">
-										<div class="col-sm-5">
-											<?php echo $this->Form->control('profile_document',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
-										</div>
-									</div>
-									<?= $this->Form->button(__('Next'),['class'=>'btn btn-success pull-right','id'=>'last_step']) ?>
+									<?php echo $this->Form->control('located_city',['class'=>'form-control','placeholder'=>'Located City','label'=>false,'required'=>'required']); ?>
+										
+								</div>
+								<div class="form-group">
+									<?php echo $this->Form->control('skill_set',['class'=>'form-control','placeholder'=>'Skill Set','label'=>false,'required'=>'required']); ?>
+								</div>
+								<div class="form-group">
+									<?php echo $this->Form->control('job_profile',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required']); ?>
+								</div>
+								<div class="form-group">
+									<?php echo $this->Form->control('profile_document',['class'=>'','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
+									<span>Upload Resume</span>
+								</div>
+								<div class="form-group">
+									<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left','type'=>'button','id'=>'last_step_back']) ?>
+									<?= $this->Form->button(__('Finish'),['class'=>'btn btn-gradient pull-right','id'=>'last_step']) ?>
+								<div>
 							</div>
 						</div>
 					<!-- End Wizard Content -->

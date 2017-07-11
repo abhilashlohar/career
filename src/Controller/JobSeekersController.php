@@ -97,6 +97,7 @@ class JobSeekersController extends AppController
 			$files=$this->request->data['profile_document'];
 			$this->request->data['profile_document']=$files['name'];
             $jobSeeker = $this->JobSeekers->patchEntity($jobSeeker, $this->request->getData());
+			
             if ($job_seeker_data=$this->JobSeekers->save($jobSeeker)) {
 				
 				$job_seeker_id=$job_seeker_data->id; 
@@ -108,7 +109,7 @@ class JobSeekersController extends AppController
 				
                 $this->Flash->success(__('The job seeker has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect(['action' => 'login']);
             }
             $this->Flash->error(__('The job seeker could not be saved. Please, try again.'));
         }
