@@ -6,7 +6,7 @@
 	border:1px solid #FFF !important;
 }
 .trans{
-	background-color: -webkit(#0009 !important);
+	background-color: #0009 !important;
 	border-radius: 20px;
 }
 .accordian-trans{
