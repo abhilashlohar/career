@@ -253,25 +253,21 @@ table td,th {
 							</div>
 							<div class="wizard-pane" id="exampleGetting" role="tabpanel">
 								<div class="form-group">
-										<label class="col-sm-4 control-label" for="inputUserName">Located City</label>
 										<div class="col-sm-5">
 											<?php echo $this->Form->control('located_city',['class'=>'form-control','placeholder'=>'Located City','label'=>false,'required'=>'required']); ?>
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-4 control-label" for="inputUserName">Skill Set</label>
 										<div class="col-sm-5">
 											<?php echo $this->Form->control('skill_set',['class'=>'form-control','placeholder'=>'Skill Set','label'=>false,'required'=>'required']); ?>
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-4 control-label" for="inputUserName">Job Profile</label>
 										<div class="col-sm-5">
 											<?php echo $this->Form->control('job_profile',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required']); ?>
 										</div>
 									</div>
 									<div class="form-group">
-										<label class="col-sm-4 control-label" for="inputUserName">Profile Document</label>
 										<div class="col-sm-5">
 											<?php echo $this->Form->control('profile_document',['class'=>'form-control','placeholder'=>'Job Profile','label'=>false,'required'=>'required','type'=>'file']); ?>
 										</div>
