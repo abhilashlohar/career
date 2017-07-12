@@ -16,7 +16,7 @@
 	<?php echo $this->Html->css('/assets/css/bootstrap-extend.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/site.min.css'); ?>
 	<?php echo $this->Html->css('/css/style.css'); ?>
-
+<?php echo $this->Html->css('/assets/skins/grey.css'); ?>
 	<!-- Plugins -->
 	<?php echo $this->Html->css('/assets/vendor/animsition/animsition.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/asscrollable/asScrollable.css'); ?>
@@ -47,14 +47,11 @@
 
 	<!-- Scripts -->
 	<style>
-	.site-menubar{
-		background:#FFF;
-		
-	}
-	.site-menu >li
-	{
-		color:#000;
-	}
+	.site-menubar-unfold .site-menu > .site-menu-item > a .site-menu-title {
+    font-size: 14px;
+    color: #504d4d;
+}
+
 	</style>
 	<?php echo $this->Html->script('/assets/vendor/modernizr/modernizr.js'); ?>
 	<?php echo $this->Html->script('/assets/vendor/breakpoints/breakpoints.js'); ?>
@@ -67,9 +64,9 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-	<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega" role="navigation">
+	<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega bg-grey-600" role="navigation">
 
-    <div class="navbar-header">
+    <div class="navbar-header" style="background-color:#000;">
       <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
       data-toggle="menubar">
         <span class="sr-only">Toggle navigation</span>
@@ -89,7 +86,7 @@
       <!-- Navbar Collapse -->
       <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
         <!-- Navbar Toolbar -->
-        <ul class="nav navbar-toolbar">
+        <!--<ul class="nav navbar-toolbar">
           <li class="hidden-float" id="toggleMenubar">
             <a data-toggle="menubar" href="#" role="button">
               <i class="icon hamburger hamburger-arrow-left">
@@ -104,7 +101,7 @@
             </a>
           </li>
           
-        </ul>
+        </ul>-->
         <!-- End Navbar Toolbar -->
 
         <!-- Navbar Toolbar Right -->
@@ -115,7 +112,7 @@
 			<b>Abhilash <i class="icon wb-chevron-down-mini" aria-hidden="true"></i></b>
 			</a>
             <ul class="dropdown-menu" role="menu">
-              <li role="presentation">
+              <!--<li role="presentation">
                 <a href="javascript:void(0)" role="menuitem"><i class="icon wb-user" aria-hidden="true"></i> Profile</a>
               </li>
               <li role="presentation">
@@ -124,9 +121,9 @@
               <li role="presentation">
                 <a href="javascript:void(0)" role="menuitem"><i class="icon wb-settings" aria-hidden="true"></i> Settings</a>
               </li>
-              <li class="divider" role="presentation"></li>
+              <li class="divider" role="presentation"></li>-->
               <li role="presentation">
-				<?php echo $this->Html->link('<i class="icon wb-power" aria-hidden="true"></i> Logout', array('controller' => 'CorporateUsers', 'action' => 'logout'),['escape'=>false,'role'=>'menuitem']);  ?>
+				<?php echo $this->Html->link('<i class="icon wb-power" aria-hidden="true"></i> Logout', array('controller' => 'JobSeekers', 'action' => 'logout'),['escape'=>false,'role'=>'menuitem']);  ?>
               </li>
             </ul>
           </li>
@@ -136,7 +133,7 @@
               <i class="icon wb-bell" aria-hidden="true"></i>
               <span class="badge badge-danger up">5</span>
             </a>
-            <ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
+            <!--<ul class="dropdown-menu dropdown-menu-right dropdown-menu-media" role="menu">
               <li class="dropdown-menu-header" role="presentation">
                 <h5>NOTIFICATIONS</h5>
                 <span class="label label-round label-danger">New 5</span>
@@ -211,7 +208,7 @@
                     All notifications
                   </a>
               </li>
-            </ul>
+            </ul>-->
           </li>
         </ul>
         <!-- End Navbar Toolbar Right -->
@@ -222,7 +219,7 @@
     </div>
 
   </nav>
-  <div class="site-menubar">
+  <div class="site-menubar site-menubar-light">
     <div class="site-menubar-body">
       <div>
         <div>
@@ -233,49 +230,69 @@
                 <span class="site-menu-title" style="color:#FFF;">Dashboard</span>
               </a>
             </li>
-			<li class="site-menu-item ">
-              <a href="#" data-slug="My Profile">
-                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">My Profile</span>
-              </a>
-            </li>
-			<li class="site-menu-item ">
-              <a href="#" data-slug="My Account">
-                <?php echo $this->Html->image('/img/account.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">My Account</span>
-              </a>
-            </li>
-			<li class="site-menu-item ">
-              <a href="#" data-slug="Search Jobseeker">
-                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">Search Jobseeker</span>
-              </a>
-            </li>
 			<li class="site-menu-item has-sub">
               <a href="javascript:void(0)" data-slug="Jobs">
                 <?php echo $this->Html->image('/img/jobs.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
                 <span class="site-menu-title">Jobs</span>
+				<span class="site-menu-arrow"></span>
               </a>
               <ul class="site-menu-sub">
                 <li class="site-menu-item">
                   <a class="animsition-link" href="#" data-slug="dashboard-v1">
                     <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Post Job</span>
+                    <span class="site-menu-title">RECOMMENDED JOBS</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
                   <a class="animsition-link" href="#" data-slug="dashboard-v2">
                     <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">Jobs Posted</span>
+                    <span class="site-menu-title">VIEW ALL JOBS</span>
+                  </a>
+                </li>
+				<li class="site-menu-item">
+                  <a class="animsition-link" href="#" data-slug="dashboard-v2">
+                    <i class="site-menu-icon " aria-hidden="true"></i>
+                    <span class="site-menu-title">APPLIED JOBS</span>
                   </a>
                 </li>
               </ul>
             </li>
+			<li class="site-menu-item ">
+              <a href="#" data-slug="My Profile">
+                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">ASSESSMENTS</span>
+              </a>
+            </li>
+			<li class="site-menu-item ">
+              <a href="#" data-slug="My Account">
+                <?php echo $this->Html->image('/img/account.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">E-LEARNING</span>
+              </a>
+            </li>
+			<li class="site-menu-item ">
+              <a href="#" data-slug="Search Jobseeker">
+                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">RESUME WRITER</span>
+              </a>
+            </li>
+			<li class="site-menu-item ">
+              <a href="#" data-slug="Search Jobseeker">
+               <?php echo $this->Html->image('/img/account.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">MY ACCOUNT</span>
+              </a>
+            </li>
+			<li class="site-menu-item ">
+              <a href="#" data-slug="Search Jobseeker">
+                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">MY PROFILE</span>
+              </a>
+            </li>
+			
           </ul>
         </div>
       </div>
     </div>
-
+<!--
     <div class="site-menubar-footer">
       <a href="javascript: void(0);" class="fold-show" data-placement="top" data-toggle="tooltip"
       data-original-title="Settings">
@@ -287,7 +304,7 @@
       <a href="javascript: void(0);" data-placement="top" data-toggle="tooltip" data-original-title="Logout">
         <span class="icon wb-power" aria-hidden="true"></span>
       </a>
-    </div>
+    </div>-->
   </div>
 
 
@@ -299,8 +316,6 @@
 
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 -->
-
-  
 
   <!-- Core  -->
   <?php echo $this->Html->script('/assets/vendor/jquery/jquery.js'); ?>
@@ -347,7 +362,6 @@
 	 <?= $this->fetch('jsChart1')?>
   <?php echo $this->Html->script('/assets/examples/js/dashboard/v2.js'); ?>
  
-  
 </body>
 
 </html>

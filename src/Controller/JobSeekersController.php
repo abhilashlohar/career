@@ -60,6 +60,7 @@ class JobSeekersController extends AppController
      */
     public function index()
     {
+		
 		$this->viewBuilder()->layout('dashboard2');
         $jobSeekers = $this->paginate($this->JobSeekers);
 
