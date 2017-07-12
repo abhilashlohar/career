@@ -117,7 +117,7 @@ table td,th {
 									
 								
 							<div class="wizard-pane" id="academic_info" role="tabpanel">
-								<div class="col-md-5 col-sm-offset-3 ">
+								<div class="col-md-4 col-sm-offset-4 ">
 									<!-- Example Continuous Accordion -->
 									<div class="examle-wrap black-color">
 									  <div class="example">
