@@ -3,7 +3,7 @@
 	color:#FFF !important;
 }
 .page-content{
-background: #0009;
+background-color: rgba(0, 0, 0, 0.58);
 border-radius: 20px;
 }
 

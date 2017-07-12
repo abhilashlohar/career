@@ -6,11 +6,11 @@
 	border:1px solid #FFF !important;
 }
 .trans{
-	background-color: #0009 !important;
+	background-color: rgba(0, 0, 0, 0.58);
 	border-radius: 20px;
 }
 .accordian-trans{
-	background-color: #0000 !important;
+	background-color: rgba(0, 0, 0, 0.58);
 	border:1px solid #FFF;
 }
 table td,th {

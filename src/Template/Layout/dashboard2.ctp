@@ -15,6 +15,7 @@
 	<?php echo $this->Html->css('/assets/css/bootstrap.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/bootstrap-extend.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/site.min.css'); ?>
+	<?php echo $this->Html->css('/css/style.css'); ?>
 
 	<!-- Plugins -->
 	<?php echo $this->Html->css('/assets/vendor/animsition/animsition.css'); ?>
@@ -23,7 +24,10 @@
 	<?php echo $this->Html->css('/assets/vendor/intro-js/introjs.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/slidepanel/slidePanel.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/flag-icon-css/flag-icon.css'); ?>
-
+	
+	<!-- Page -->
+	<?= $this->fetch('cssChart')?>
+	
 	<!-- Fonts -->
 	<?php echo $this->Html->css('/assets/fonts/web-icons/web-icons.min.css'); ?>
 	<?php echo $this->Html->css('/assets/fonts/brand-icons/brand-icons.min.css'); ?>
@@ -42,6 +46,16 @@
 	<![endif]-->
 
 	<!-- Scripts -->
+	<style>
+	.site-menubar{
+		background:#FFF;
+		
+	}
+	.site-menu >li
+	{
+		color:#000;
+	}
+	</style>
 	<?php echo $this->Html->script('/assets/vendor/modernizr/modernizr.js'); ?>
 	<?php echo $this->Html->script('/assets/vendor/breakpoints/breakpoints.js'); ?>
 	<script>
@@ -213,10 +227,10 @@
       <div>
         <div>
           <ul class="site-menu">
-			<li class="site-menu-item ">
+			<li class="site-menu-item btn-gradient ">
               <a href="#" data-slug="dashboard">
                 <?php echo $this->Html->image('/img/dashboard.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">Dashboard</span>
+                <span class="site-menu-title" style="color:#FFF;">Dashboard</span>
               </a>
             </li>
 			<li class="site-menu-item ">
@@ -281,10 +295,10 @@
   <div class="page">
 	<?php echo $this->fetch('content'); ?>
   </div>
-  <!-- End Page -->
+  <!-- End Page 
 
   <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-
+-->
 
   
 
@@ -304,9 +318,11 @@
   <?php echo $this->Html->script('/assets/vendor/slidepanel/jquery-slidePanel.js'); ?>
 
   <!-- Plugins For This Page -->
-  <?php echo $this->Html->script('/assets/vendor/chartist-js/chartist.min.js'); ?>
-  <?php echo $this->Html->script('/assets/vendor/gmaps/gmaps.js'); ?>
-  <?php echo $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js'); ?>
+  <?= $this->fetch('jsChart')?>
+  
+  <?php //echo $this->Html->script('/assets/vendor/chartist-js/chartist.min.js'); ?>
+  <?php // echo $this->Html->script('/assets/vendor/gmaps/gmaps.js'); ?>
+  <?php //echo $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js'); ?>
 
  <!-- Scripts -->
   <?php echo $this->Html->script('/assets/js/core.js'); ?>
@@ -326,10 +342,12 @@
   <?php echo $this->Html->script('/assets/js/components/switchery.js'); ?>
 
   <!-- Scripts For This Page -->
-  <?php echo $this->Html->script('/assets/js/components/gmaps.js'); ?>
-  <?php echo $this->Html->script('/assets/js/components/matchheight.js'); ?>
-
+  <?php //echo $this->Html->script('/assets/js/components/gmaps.js'); ?>
+  <?php //echo $this->Html->script('/assets/js/components/matchheight.js'); ?>
+	 <?= $this->fetch('jsChart1')?>
   <?php echo $this->Html->script('/assets/examples/js/dashboard/v2.js'); ?>
+ 
+  
 </body>
 
 </html>
