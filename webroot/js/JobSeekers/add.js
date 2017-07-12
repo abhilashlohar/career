@@ -35,20 +35,48 @@
   });
   $(document).on('click','#first_step',function(e){
 	$("#last_step").click();
-	  var inputName=$('#inputName')[0].checkValidity();
+	var email= $('#inputEmail').val();
+	var email_url= $('#email_url').val();
+	
+	var url=email_url;
+	var email_exist=0;
+	url=url+'/'+email;
+	
+	$.ajax({
+		url:url,
+		async: false,
+		success:function(data) {
+			email_exist=data;
+		}
+	});
+	if(email_exist==1)
+	{
+		alert("This email is already exist.");
+	}
+	var inputPasswordCheck=$('#inputPassword').val();
+	var inputPasswordConfirmCheck=$('#inputPasswordConfirm').val();
+	
+	 var inputName=$('#inputName')[0].checkValidity();
 	 var inputMobileNo=$('#inputMobileNo')[0].checkValidity();
 	 var inputEmail=$('#inputEmail')[0].checkValidity();
 	 var inputPassword=$('#inputPassword')[0].checkValidity();
 	 var inputPasswordConfirm=$('#inputPasswordConfirm')[0].checkValidity();
-	 if(inputName && inputMobileNo && inputEmail && inputPassword && inputPasswordConfirm)
-	 { 
+	 if(inputName && inputMobileNo && inputEmail && inputPassword && inputPasswordConfirm && email_exist==0)
+	 {
+		if(inputPasswordCheck != inputPasswordConfirmCheck)
+		{
+			alert('Password do not match.');
+		}
+		else
+		{
 		 $('#personal_info').removeClass('active');
 		 $('.first_step').removeClass('current');
 		 $('.first_step').addClass('done');
 		 $('.second_step').removeClass('disabled');
 		 $('.second_step').addClass('current');
 		 $('#academic_info').addClass('active');
-	 } 
+		}
+	 }  
   });
   $(document).on('click','#second_step',function(e){
 	 $("#last_step").click();

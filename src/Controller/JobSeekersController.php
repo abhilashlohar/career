@@ -29,7 +29,7 @@ class JobSeekersController extends AppController
         // Allow users to register and logout.
         // You should not add the "login" action to allow list. Doing so would
         // cause problems with normal functioning of AuthComponent.
-        $this->Auth->allow([ 'logout', 'login', 'add']);
+        $this->Auth->allow([ 'logout', 'login', 'add', 'checkExistEmail']);
     }
 	
 	public function logout()
@@ -83,7 +83,11 @@ class JobSeekersController extends AppController
         $this->set('jobSeeker', $jobSeeker);
         $this->set('_serialize', ['jobSeeker']);
     }
-
+	public function checkExistEmail($email = null)
+	{
+		echo $jobSeeker = $this->JobSeekers->find()->where(['email'=>$email])->count();
+		exit;
+	}
     /**
      * Add method
      *

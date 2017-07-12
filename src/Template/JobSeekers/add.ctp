@@ -60,6 +60,8 @@ table td,th {
 		<div class="row">
 		<?= $this->Flash->render() ?>
 		<?= $this->Form->create($jobSeeker,['id'=>'registrationForm','class'=>'form-horizontal','style'=>'width: 80% !important;','type'=>'file']) ?>
+		<?php $email_url=$this->Url->build(['controller'=>'JobSeekers','action'=>'checkExistEmail']); ?>
+		<?php echo $this->Form->control('email_url',['class'=>'form-control','label'=>false,'type'=>'hidden','id'=>'email_url','value'=>$email_url]); ?>
 			<div class="col-md-12">
 			<!-- Panel Wizard Form -->
 				<div class="panel trans" id="exampleWizardForm">
