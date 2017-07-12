@@ -117,7 +117,7 @@ table td,th {
 									
 								
 							<div class="wizard-pane" id="academic_info" role="tabpanel">
-								<div class="col-lg-12">
+								<div class="col-md-5 col-sm-offset-3 ">
 									<!-- Example Continuous Accordion -->
 									<div class="examle-wrap black-color">
 									  <div class="example">
@@ -135,17 +135,17 @@ table td,th {
 											role="tabpanel">
 											  <div class="panel-body">
 												<div class="form-group">
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[0][degree_type]',['label'=>false,'type'=>'hidden','value'=>'10th','class'=>'']); ?>
 													<?php echo $this->Form->control('job_seeker_rows[0][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false,'required'=>'required','id'=>'10_institute_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[0][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false,'required'=>'required','id'=>'10_location']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[0][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false,'required'=>'required','id'=>'10_percentage_cgpa']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[0][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false,'required'=>'required','id'=>'10_passed_out_year']); ?>
 													</div>
 												</div>
@@ -164,18 +164,18 @@ table td,th {
 											role="tabpanel">
 											  <div class="panel-body">
 												<div class="form-group">
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[1][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Intermediate','class'=>'']); ?>
 													
 													<?php echo $this->Form->control('job_seeker_rows[1][institute_name]',['class'=>'form-control','placeholder'=>'Institute Name','label'=>false,'required'=>'required','id'=>'12_institute_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[1][location]',['class'=>'form-control','placeholder'=>'Location','label'=>false,'required'=>'required','id'=>'12_location']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[1][percentage_cgpa]',['class'=>'form-control','placeholder'=>'Percentage/CGPA','label'=>false,'required'=>'required','id'=>'12_percentage_cgpa']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[1][passed_out_year]',['class'=>'form-control','placeholder'=>'Passed Out Year','label'=>false,'required'=>'required','id'=>'12_passed_out_year']); ?>
 													</div>
 												</div>
@@ -194,20 +194,20 @@ table td,th {
 											role="tabpanel">
 											  <div class="panel-body">
 												<div class="form-group">
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][degree_type]',['label'=>false,'type'=>'hidden','value'=>'Degree','class'=>'degree_type']); ?>
 													<?php echo $this->Form->control('job_seeker_rows[2][degree_name]',['class'=>'form-control degree','placeholder'=>'Degree Name','label'=>false,'id'=>'degree_degree_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][institute_name]',['class'=>'form-control degree','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control degree','placeholder'=>'Location','label'=>false,'id'=>'degree_location']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][percentage_cgpa]',['class'=>'form-control degree','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'degree_percentage_cgpa']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][passed_out_year]',['class'=>'form-control degree','placeholder'=>'Passed Out Year','label'=>false,'id'=>'degree_passed_out_year']); ?>
 													</div>
 												</div>
@@ -226,20 +226,20 @@ table td,th {
 											role="tabpanel">
 											  <div class="panel-body">
 												<div class="form-group">
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[3][degree_type]',['label'=>false,'type'=>'hidden','value'=>'PG','class'=>'pg_type']); ?>
 													<?php echo $this->Form->control('job_seeker_rows[3][degree_name]',['class'=>'form-control pg','placeholder'=>'Degree Name','label'=>false,'id'=>'pg_degree_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[3][institute_name]',['class'=>'form-control pg','placeholder'=>'Institute Name','label'=>false,'id'=>'degree_institute_name']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[2][location]',['class'=>'form-control pg','placeholder'=>'Location','label'=>false,'id'=>'pf_location']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[3][percentage_cgpa]',['class'=>'form-control pg','placeholder'=>'Percentage/CGPA','label'=>false,'id'=>'pg_percentage_cgpa']); ?>
 													</div>
-													<div class="col-md-3 margin">
+													<div class="margin">
 													<?php echo $this->Form->control('job_seeker_rows[3][passed_out_year]',['class'=>'form-control pg','placeholder'=>'Passed Out Year','label'=>false,'id'=>'pg_passed_out_year']); ?>
 													</div>
 												</div>
@@ -250,9 +250,10 @@ table td,th {
 									  </div>
 									</div>
 									<!-- End Example Continuous Accordion -->
+									<?= $this->Form->button(__('Next'),['class'=>'btn btn-gradient pull-right col-md-5','type'=>'button','id'=>'second_step']) ?>
+								<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left  col-md-5','type'=>'button','id'=>'second_step_back']) ?>
 								  </div>
-								<?= $this->Form->button(__('Next'),['class'=>'btn btn-gradient pull-right','type'=>'button','id'=>'second_step']) ?>
-								<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left','type'=>'button','id'=>'second_step_back']) ?>
+								
 							</div>
 							<div class="wizard-pane col-md-4 col-sm-offset-4 " id="job_info" role="tabpanel">
 								<div class="form-group">
@@ -270,8 +271,8 @@ table td,th {
 									<span>Upload Resume</span>
 								</div>
 								<div class="form-group">
-									<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left','type'=>'button','id'=>'last_step_back']) ?>
-									<?= $this->Form->button(__('Finish'),['class'=>'btn btn-gradient pull-right','id'=>'last_step']) ?>
+									<?= $this->Form->button(__('Back'),['class'=>'btn btn-default pull-left col-md-5','type'=>'button','id'=>'last_step_back']) ?>
+									<?= $this->Form->button(__('Finish'),['class'=>'btn btn-gradient pull-right col-md-5','id'=>'last_step']) ?>
 								<div>
 							</div>
 						</div>
