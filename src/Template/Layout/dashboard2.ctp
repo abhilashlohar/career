@@ -240,51 +240,51 @@
                 <li class="site-menu-item">
                   <a class="animsition-link" href="#" data-slug="dashboard-v1">
                     <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">RECOMMENDED JOBS</span>
+                    <span class="site-menu-title">Recommended Jobs</span>
                   </a>
                 </li>
                 <li class="site-menu-item">
                   <a class="animsition-link" href="#" data-slug="dashboard-v2">
                     <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">VIEW ALL JOBS</span>
+                    <span class="site-menu-title">View All Jobs</span>
                   </a>
                 </li>
 				<li class="site-menu-item">
                   <a class="animsition-link" href="#" data-slug="dashboard-v2">
                     <i class="site-menu-icon " aria-hidden="true"></i>
-                    <span class="site-menu-title">APPLIED JOBS</span>
+                    <span class="site-menu-title">Applied Jobs</span>
                   </a>
                 </li>
               </ul>
             </li>
 			<li class="site-menu-item ">
               <a href="#" data-slug="My Profile">
-                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">ASSESSMENTS</span>
+                <?php echo $this->Html->image('/img/assessments.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title"> Assessments</span>
               </a>
             </li>
 			<li class="site-menu-item ">
               <a href="#" data-slug="My Account">
-                <?php echo $this->Html->image('/img/account.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">E-LEARNING</span>
+                <?php echo $this->Html->image('/img/elearning.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">E-Learning</span>
               </a>
             </li>
 			<li class="site-menu-item ">
               <a href="#" data-slug="Search Jobseeker">
-                <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">RESUME WRITER</span>
+                <?php echo $this->Html->image('/img/resume.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
+                <span class="site-menu-title">Resume Writer</span>
               </a>
             </li>
 			<li class="site-menu-item ">
               <a href="#" data-slug="Search Jobseeker">
                <?php echo $this->Html->image('/img/account.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">MY ACCOUNT</span>
+                <span class="site-menu-title">My Account</span>
               </a>
             </li>
 			<li class="site-menu-item ">
               <a href="#" data-slug="Search Jobseeker">
                 <?php echo $this->Html->image('/img/profile.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true','style'=>'font-size: 24px;']); ?>
-                <span class="site-menu-title">MY PROFILE</span>
+                <span class="site-menu-title">My Profile</span>
               </a>
             </li>
 			
