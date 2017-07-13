@@ -8,33 +8,33 @@
 .widget-content ul{
 	padding-left: 5%;
 }
+.page-header {
+    background-image: url(/career/img/bgheader.png);
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-top:3px;
+}
 </style>
 <?php $this->set('title', 'Dashboard'); ?>
-<div style="position: relative;">
-	<?php echo $this->Html->image('/img/dashboard2.svg',['width'=>'100%']); ?>
-	<div style="position: absolute;top: 0;bottom: 0;right: 0;left: 0;">
-		<table width="100%">
-			<tr>
-				<td width="50%">
-					<div style="width: 60%;margin: auto;margin-top: 5%;">
-					<span style="font-size: 32px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Ankit Parikh</span><br/>
-					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Udaipur, Rajshtan - India</span><br/>
-					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Android Development</span>
-					</div>
-				</td>
-				<td width="50%">
-					<div class="col-md-2 pull-right" style="width:85px;border:2px solid black;border-radius: 59%;height: 83px;text-align: center;padding-top: 6%;font-size: 15px;font-weight: 700;margin: auto;margin-top: 8%;margin-right: 15%;" >
-					  63%
-					</div>
-					<div class="pull-right" style="width:200px;text-align: right;padding-top: 6%;font-size: 15px;margin: auto;margin-top: 19%;margin-right: -19%;color:#000;" >
-					  Performance Level
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-</div>
 
+<div class="page-header height-200 margin-bottom-30">
+      <div class="margin-top-10">
+        <ul class="list-inline font-size-14">
+          <li class="col-md-6" style="text-align:left;color:#000; font-size:18px;">
+           <strong><?= $job_seeker_name ?><br/><?= $located_city ?><br/>Android Development</strong>
+          </li>
+          <li class="col-md-6" style="text-align:right">
+		  <svg height="100" width="100" style="margin-right: 5%;">
+				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="9" fill="white" fill-opacity="0" />
+				<text x="50%" y="50%" text-anchor="middle" stroke="rgb(0, 0, 0)" stroke-width="2px" dy=".3em">63%</text>
+		  </svg>
+		  <p style="color:#000; font-size:18px;"><strong>Performance Level</strong></p>
+          </li>
+        </ul>
+      </div>
+    </div>
 <div class="page-content container-fluid">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
 		<div class="col-lg-4" style="height: 536px;">
@@ -108,11 +108,11 @@
 <?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
 
 <style>
-.dashboard .page-header {
+/* .dashboard .page-header {
   background-image: url("<?php echo $this->request->webroot; ?>assets/images/dashboard2-header.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-}
+} */
 </style>
 <?php echo $this->Html->css('/assets/examples/css/charts/chartjs.css', ['block' => 'cssChart']); ?>
 <?php $this->Html->script('/assets/vendor/chart-js/Chart.js', ['block' => 'jsChart']); ?>
