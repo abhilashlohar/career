@@ -114,7 +114,7 @@ class JobSeekersController extends AppController
 				
 					move_uploaded_file($files['tmp_name'], $file_path.'/' . $files['name']);
 				$this->Auth->setUser($job_seeker_data);
-                $this->Flash->success(__('The job seeker has been saved.'));
+                $this->Flash->success(__('The job seeker registration has been saved.'));
 
 				return $this->redirect(['controller'=>'JobSeekers','action' => 'index']);
             }
