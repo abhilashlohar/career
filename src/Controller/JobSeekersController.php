@@ -46,12 +46,11 @@ class JobSeekersController extends AppController
 		$this->viewBuilder()->layout('signup');
         if ($this->request->is('post')) 
 		{
-            $user = $this->Auth->identify();
-            if ($user) 
+            
+			$user = $this->Auth->identify();
+		   if ($user) 
 			{
-				
-                $this->Auth->setUser($user);
-				
+			    $this->Auth->setUser($user);
 				return $this->redirect(['controller'=>'JobSeekers','action' => 'index']);
             }
             $this->Flash->error(__('Invalid Username or Password'));
@@ -64,7 +63,6 @@ class JobSeekersController extends AppController
      */
     public function index()
     {
-		
 		$this->viewBuilder()->layout('dashboard2');
         $jobSeekers = $this->paginate($this->JobSeekers);
 
@@ -115,10 +113,10 @@ class JobSeekersController extends AppController
 				$file_path = str_replace("\\","/",WWW_ROOT).'img/jobseeker/'.$job_seeker_id;
 				
 					move_uploaded_file($files['tmp_name'], $file_path.'/' . $files['name']);
-				
+				$this->Auth->setUser($job_seeker_data);
                 $this->Flash->success(__('The job seeker has been saved.'));
 
-                return $this->redirect(['action' => 'login']);
+				return $this->redirect(['controller'=>'JobSeekers','action' => 'index']);
             }
             $this->Flash->error(__('The job seeker could not be saved. Please, try again.'));
         }
