@@ -21,6 +21,9 @@ class JobSeekersController extends AppController
 	public function initialize()
 	{
 		parent::initialize();
+		$job_seeker_name=$this->Auth->User('name');
+		$located_city=$this->Auth->User('located_city');
+		$this->set(compact('job_seeker_name','located_city'));
 		$this->Auth->allow(['logout']);
 	}
 	public function beforeFilter(Event $event)
@@ -46,6 +49,7 @@ class JobSeekersController extends AppController
             $user = $this->Auth->identify();
             if ($user) 
 			{
+				
                 $this->Auth->setUser($user);
 				
 				return $this->redirect(['controller'=>'JobSeekers','action' => 'index']);

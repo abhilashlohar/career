@@ -109,7 +109,7 @@
           
           <li class="dropdown">
             <a class="navbar-avatar dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="false" data-animation="scale-up" role="button" style="height: 64px;">
-			<b>Abhilash <i class="icon wb-chevron-down-mini" aria-hidden="true"></i></b>
+			<b><?= $job_seeker_name ?> <i class="icon wb-chevron-down-mini" aria-hidden="true"></i></b>
 			</a>
             <ul class="dropdown-menu" role="menu">
               <!--<li role="presentation">

@@ -8,8 +8,16 @@
 .widget-content ul{
 	padding-left: 5%;
 }
+.page-header {
+    background-image: url(/img/bgheader.png);
+    -webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
 </style>
 <?php $this->set('title', 'Dashboard'); ?>
+<!--
 <div style="position: relative;">
 	<?php echo $this->Html->image('/img/dashboard2.svg',['width'=>'100%']); ?>
 	<div style="position: absolute;top: 0;bottom: 0;right: 0;left: 0;">
@@ -17,8 +25,8 @@
 			<tr>
 				<td width="50%">
 					<div style="width: 60%;margin: auto;margin-top: 5%;">
-					<span style="font-size: 32px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Ankit Parikh</span><br/>
-					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Udaipur, Rajshtan - India</span><br/>
+					<span style="font-size: 32px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';"><?= $job_seeker_name ?></span><br/>
+					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';"><?= $located_city ?></span><br/>
 					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Android Development</span>
 					</div>
 				</td>
@@ -34,7 +42,25 @@
 		</table>
 	</div>
 </div>
+-->
 
+<div class="page-header height-300 margin-bottom-30">
+      <div class="margin-top-30">
+        
+        <ul class="list-inline font-size-14">
+          <li class="col-md-6" style="text-align:left;color:#000; font-size:18px;">
+           <?= $job_seeker_name ?><br/><?= $located_city ?><br/>Android Development
+          </li>
+          <li class="col-md-6" style="text-align:right">
+		  <svg height="100" width="100" style="margin-right: 5%;">
+				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="9" fill="white" fill-opacity="0" />
+				<text x="50%" y="50%" text-anchor="middle" stroke="rgb(0, 0, 0)" stroke-width="2px" dy=".3em">63%</text>
+		  </svg>
+		  <p style="color:#000; font-size:18px;">Performance Level</p>
+          </li>
+        </ul>
+      </div>
+    </div>
 <div class="page-content container-fluid">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
 		<div class="col-lg-4" style="height: 536px;">
@@ -108,11 +134,11 @@
 <?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
 
 <style>
-.dashboard .page-header {
+/* .dashboard .page-header {
   background-image: url("<?php echo $this->request->webroot; ?>assets/images/dashboard2-header.jpg");
   -webkit-background-size: cover;
           background-size: cover;
-}
+} */
 </style>
 <?php echo $this->Html->css('/assets/examples/css/charts/chartjs.css', ['block' => 'cssChart']); ?>
 <?php $this->Html->script('/assets/vendor/chart-js/Chart.js', ['block' => 'jsChart']); ?>
