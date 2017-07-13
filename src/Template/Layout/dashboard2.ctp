@@ -16,7 +16,7 @@
 	<?php echo $this->Html->css('/assets/css/bootstrap-extend.min.css'); ?>
 	<?php echo $this->Html->css('/assets/css/site.min.css'); ?>
 	<?php echo $this->Html->css('/css/style.css'); ?>
-<?php echo $this->Html->css('/assets/skins/grey.css'); ?>
+	<?php echo $this->Html->css('/assets/skins/grey.css'); ?>
 	<!-- Plugins -->
 	<?php echo $this->Html->css('/assets/vendor/animsition/animsition.css'); ?>
 	<?php echo $this->Html->css('/assets/vendor/asscrollable/asScrollable.css'); ?>
@@ -27,6 +27,8 @@
 	
 	<!-- Page -->
 	<?= $this->fetch('cssChart')?>
+	<?= $this->fetch('cssPiChart')?>
+	<?= $this->fetch('Dashboard2')?>
 	
 	<!-- Fonts -->
 	<?php echo $this->Html->css('/assets/fonts/web-icons/web-icons.min.css'); ?>
@@ -333,7 +335,9 @@
   <?php echo $this->Html->script('/assets/vendor/slidepanel/jquery-slidePanel.js'); ?>
 
   <!-- Plugins For This Page -->
+  <?= $this->fetch('jsMatchHeight')?>
   <?= $this->fetch('jsChart')?>
+  <?= $this->fetch('jsPiChart')?>
   
   <?php //echo $this->Html->script('/assets/vendor/chartist-js/chartist.min.js'); ?>
   <?php // echo $this->Html->script('/assets/vendor/gmaps/gmaps.js'); ?>
@@ -360,6 +364,9 @@
   <?php //echo $this->Html->script('/assets/js/components/gmaps.js'); ?>
   <?php //echo $this->Html->script('/assets/js/components/matchheight.js'); ?>
 	 <?= $this->fetch('jsChart1')?>
+	 <?= $this->fetch('jsPiChart1')?>
+	 <?= $this->fetch('jsIndex')?>
+	 <?= $this->fetch('jsMatchHeight1')?>
   <?php echo $this->Html->script('/assets/examples/js/dashboard/v2.js'); ?>
  
 </body>

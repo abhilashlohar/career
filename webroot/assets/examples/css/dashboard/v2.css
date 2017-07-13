@@ -1,8 +1,4 @@
-.dashboard .page-header {
-  background-image: url("../../images/dashboard2-header.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-}
+
 .dashboard .widget,
 .dashboard .panel {
   height: -webkit-calc(100% - 30px);

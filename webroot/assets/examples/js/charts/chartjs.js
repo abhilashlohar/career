@@ -17,7 +17,7 @@
 
   // Example Chartjs Line
   // --------------------
-  /* (function() {
+   (function() {
     var lineChartData = {
       labels: ["January", "February", "March", "April", "May", "June", "July"],
       scaleShowGridLines: true,
@@ -146,29 +146,11 @@
     }];
 
     var myPie = new Chart(document.getElementById("exampleChartjsPie").getContext("2d")).Pie(pieData);
-  })(); */
+  })(); 
 
 
   // Example Chartjs Donut
   // ---------------------
-  (function() {
-    var doughnutDatas = [{
-      value: 40,
-      color: $.colors("green", 500),
-      label: "Green"
-    }, {
-      value: 40,
-      color: $.colors("blue-grey", 200),
-      label: "Blue-grey"
-    }, {
-      value: 40,
-      color: $.colors("primary", 500),
-      label: "Blue"
-    }];
-
-    var myDoughnut = new Chart(document.getElementById("exampleChartjsDonut").getContext("2d")).Doughnut(doughnutDatas);
-	
-  })();
   (function() {
     var doughnutData = [{
       value: 40,
@@ -184,8 +166,9 @@
       label: "Blue"
     }];
 
-    var myDoughnut = new Chart(document.getElementById("recommendedChartjsDonut").getContext("2d")).Doughnut(doughnutData);
+    var myDoughnut = new Chart(document.getElementById("exampleChartjsDonut").getContext("2d")).Doughnut(doughnutData);
 	
   })();
+  
 
 })(document, window, jQuery);

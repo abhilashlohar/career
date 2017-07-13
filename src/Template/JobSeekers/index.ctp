@@ -16,28 +16,31 @@
 	background-size: cover;
 	padding-top:3px;
 }
+.pie-progress-content, .pie-progress-number, .pie-progress-label, .pie-progress .pie-progress-icon
+{
+	top:40% !important;
+}
 </style>
 <?php $this->set('title', 'Dashboard'); ?>
 
 <div class="page-header height-200 margin-bottom-30">
-      <div class="margin-top-10">
-        <ul class="list-inline font-size-14">
-          <li class="col-md-6" style="text-align:left;color:#000; font-size:18px;">
-           <strong><?= $job_seeker_name ?><br/><?= $located_city ?><br/>Android Development</strong>
-          </li>
-          <li class="col-md-6" style="text-align:right">
-		  <svg height="100" width="100" style="margin-right: 5%;">
-				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="9" fill="white" fill-opacity="0" />
-				<text x="50%" y="50%" text-anchor="middle" stroke="rgb(0, 0, 0)" stroke-width="2px" dy=".3em">63%</text>
-		  </svg>
-		  <p style="color:#000; font-size:18px;"><strong>Performance Level</strong></p>
-          </li>
-        </ul>
+      <div class="margin-top-20">
+			<div style="float:left;width:50%;text-align:left;color:#000; font-size:18px;">
+				<strong><span style="font-size:22px;"><?= $job_seeker_name ?></span><br/><?= $located_city ?><br/>Android Development</strong>
+			</div>
+			<div style="float:right;width:130px;" align="right">
+				<div class="pie-progress pie-progress-md center-block" id="performancePieApi" data-plugin="pieProgress"
+				data-barcolor="#fa7a7a" data-goal="75" aria-valuenow="75" data-size="350" data-barsize="10"
+				aria-valuemin="0" aria-valuemax="100" role="progressbar">
+					<div class="pie-progress-number" style="color:#000; font-size:20px;"><strong>75%</strong></div>
+					<div class="pie-progress-label" style="color:#000; font-size:15px;"><strong><br/>Performance<br/>Level</strong></div>
+				</div>
+			</div>
       </div>
     </div>
 <div class="page-content container-fluid">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
-		<div class="col-lg-4" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
             <div class="widget-content text-center bg-white padding-40">
@@ -54,7 +57,7 @@
           </div>
           <!-- End Panel Web Designer -->
         </div>
-		<div class="col-lg-4" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
             <div class="widget-content text-center bg-white padding-40">
@@ -73,12 +76,12 @@
 					</ul>
 				</ul>
               
-              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;">View All</button>
+              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:10px;">View All</button>
             </div>
           </div>
           <!-- End Panel Web Designer -->
         </div>
-		<div class="col-lg-4" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
             <div class="widget-content text-center bg-white padding-40">
@@ -97,15 +100,13 @@
 					</ul>
 				</ul>
               
-              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;">View All</button>
+              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:10px;">View All</button>
             </div>
           </div>
           <!-- End Panel Web Designer -->
         </div>
 </div>   
 </div>   
-   
-<?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
 
 <style>
 /* .dashboard .page-header {
@@ -114,6 +115,23 @@
           background-size: cover;
 } */
 </style>
+<?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
+<!-- Donut Chart -->
 <?php echo $this->Html->css('/assets/examples/css/charts/chartjs.css', ['block' => 'cssChart']); ?>
 <?php $this->Html->script('/assets/vendor/chart-js/Chart.js', ['block' => 'jsChart']); ?>
-<?php $this->Html->script('/assets/examples/js/charts/chartjs.js', ['block' => 'jsChart1']); ?>
+
+<!--  Pi Chart ---->
+<?php $this->Html->css('/assets/vendor/aspieprogress/asPieProgress.css', ['block' => 'cssPiChart']); ?>
+<?php $this->Html->css('/assets/examples/css/charts/pie-progress.css', ['block' => 'cssPiChart']); ?>
+<?php $this->Html->script('/assets/vendor/aspieprogress/jquery-asPieProgress.js', ['block' => 'jsPiChart']); ?>
+
+<?php $this->Html->script('/assets/js/components/aspieprogress.js', ['block' => 'jsPiChart1']); ?>
+
+<!--- Match Height  --->
+<?php $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js', ['block' => 'jsMatchHeight']); ?>
+<?php $this->Html->script('/assets/js/components/matchheight.js', ['block' => 'jsMatchHeight1']); ?>
+
+<!-- Index Js -->
+<?php $this->Html->script('/js/JobSeekers/index.js', ['block' => 'jsIndex']); ?>
+
+
