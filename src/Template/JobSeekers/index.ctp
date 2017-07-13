@@ -9,54 +9,28 @@
 	padding-left: 5%;
 }
 .page-header {
-    background-image: url(/img/bgheader.png);
+    background-image: url(/career/img/bgheader.png);
     -webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+	padding-top:3px;
 }
 </style>
 <?php $this->set('title', 'Dashboard'); ?>
-<!--
-<div style="position: relative;">
-	<?php echo $this->Html->image('/img/dashboard2.svg',['width'=>'100%']); ?>
-	<div style="position: absolute;top: 0;bottom: 0;right: 0;left: 0;">
-		<table width="100%">
-			<tr>
-				<td width="50%">
-					<div style="width: 60%;margin: auto;margin-top: 5%;">
-					<span style="font-size: 32px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';"><?= $job_seeker_name ?></span><br/>
-					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';"><?= $located_city ?></span><br/>
-					<span style="font-size: 18px;color: rgba(77, 57, 75, 1);font-family: 'HelveticaNeue';">Android Development</span>
-					</div>
-				</td>
-				<td width="50%">
-					<div class="col-md-2 pull-right" style="width:85px;border:2px solid black;border-radius: 59%;height: 83px;text-align: center;padding-top: 6%;font-size: 15px;font-weight: 700;margin: auto;margin-top: 8%;margin-right: 15%;" >
-					  63%
-					</div>
-					<div class="pull-right" style="width:200px;text-align: right;padding-top: 6%;font-size: 15px;margin: auto;margin-top: 19%;margin-right: -19%;color:#000;" >
-					  Performance Level
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div>
-</div>
--->
 
-<div class="page-header height-300 margin-bottom-30">
-      <div class="margin-top-30">
-        
+<div class="page-header height-200 margin-bottom-30">
+      <div class="margin-top-10">
         <ul class="list-inline font-size-14">
           <li class="col-md-6" style="text-align:left;color:#000; font-size:18px;">
-           <?= $job_seeker_name ?><br/><?= $located_city ?><br/>Android Development
+           <strong><?= $job_seeker_name ?><br/><?= $located_city ?><br/>Android Development</strong>
           </li>
           <li class="col-md-6" style="text-align:right">
 		  <svg height="100" width="100" style="margin-right: 5%;">
 				<circle cx="50" cy="50" r="40" stroke="black" stroke-width="9" fill="white" fill-opacity="0" />
 				<text x="50%" y="50%" text-anchor="middle" stroke="rgb(0, 0, 0)" stroke-width="2px" dy=".3em">63%</text>
 		  </svg>
-		  <p style="color:#000; font-size:18px;">Performance Level</p>
+		  <p style="color:#000; font-size:18px;"><strong>Performance Level</strong></p>
           </li>
         </ul>
       </div>
