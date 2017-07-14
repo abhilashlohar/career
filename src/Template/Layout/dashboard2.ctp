@@ -28,7 +28,6 @@
 	<!-- Page -->
 	<?= $this->fetch('cssChart')?>
 	<?= $this->fetch('cssPiChart')?>
-	<?= $this->fetch('Dashboard2')?>
 	
 	<!-- Fonts -->
 	<?php echo $this->Html->css('/assets/fonts/web-icons/web-icons.min.css'); ?>
@@ -36,18 +35,7 @@
 	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,300italic'>
 
 	<!-- Page -->
-	<?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css'); ?>
-
-	<!--[if lt IE 9]>
-	<script src="../../assets/vendor/html5shiv/html5shiv.min.js"></script>
-	<![endif]-->
-
-	<!--[if lt IE 10]>
-	<script src="../../assets/vendor/media-match/media.match.min.js"></script>
-	<script src="../../assets/vendor/respond/respond.min.js"></script>
-	<![endif]-->
-
-	<!-- Scripts -->
+	
 	<style>
 	.site-menubar-unfold .site-menu > .site-menu-item > a .site-menu-title {
     font-size: 14px;
@@ -339,9 +327,6 @@
   <?= $this->fetch('jsChart')?>
   <?= $this->fetch('jsPiChart')?>
   
-  <?php //echo $this->Html->script('/assets/vendor/chartist-js/chartist.min.js'); ?>
-  <?php // echo $this->Html->script('/assets/vendor/gmaps/gmaps.js'); ?>
-  <?php //echo $this->Html->script('/assets/vendor/matchheight/jquery.matchHeight-min.js'); ?>
 
  <!-- Scripts -->
   <?php echo $this->Html->script('/assets/js/core.js'); ?>
@@ -361,13 +346,11 @@
   <?php echo $this->Html->script('/assets/js/components/switchery.js'); ?>
 
   <!-- Scripts For This Page -->
-  <?php //echo $this->Html->script('/assets/js/components/gmaps.js'); ?>
-  <?php //echo $this->Html->script('/assets/js/components/matchheight.js'); ?>
 	 <?= $this->fetch('jsChart1')?>
 	 <?= $this->fetch('jsPiChart1')?>
 	 <?= $this->fetch('jsIndex')?>
 	 <?= $this->fetch('jsMatchHeight1')?>
-  <?php echo $this->Html->script('/assets/examples/js/dashboard/v2.js'); ?>
+  
  
 </body>
 
