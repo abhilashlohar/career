@@ -115,7 +115,7 @@
           background-size: cover;
 } */
 </style>
-<?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
+<?php //echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
 <!-- Donut Chart -->
 <?php echo $this->Html->css('/assets/examples/css/charts/chartjs.css', ['block' => 'cssChart']); ?>
 <?php $this->Html->script('/assets/vendor/chart-js/Chart.js', ['block' => 'jsChart']); ?>

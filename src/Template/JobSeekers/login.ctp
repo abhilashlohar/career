@@ -20,11 +20,11 @@ data-animsition-out="fade-out">
 	  <?= $this->Form->create(@$login,['role'=>'form','id'=>'loginform']) ?>  
 		<div class="form-group">
 		  <label class="sr-only" for="inputName">Email</label>
-		  <?php echo $this->Form->control('email',['class'=>'form-control','placeholder'=>'Email','label'=>false]); ?>
+		  <?php echo $this->Form->control('email',['class'=>'form-control','placeholder'=>'Email','label'=>false,'required'=>'required']); ?>
 		</div>
 		<div class="form-group">
 		  <label class="sr-only" for="inputName">Password</label>
-		  <?php echo $this->Form->control('password',['class'=>'form-control','placeholder'=>'Password','label'=>false]); ?>
+		  <?php echo $this->Form->control('password',['class'=>'form-control','placeholder'=>'Password','label'=>false,'required'=>'required']); ?>
 		</div>
 		<?= $this->Form->button(__('Login'),['class'=>'btn btn-gradient btn-block']) ?>
 	  <?= $this->Form->end() ?>
