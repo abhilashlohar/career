@@ -34,9 +34,9 @@
         // Extra small devices (phones)
         xs: {
             min: 0,
-            max: 767
+            max: 1199
         },
-        // Small devices (tablets)
+       /*  // Small devices (tablets)
         sm: {
             min: 768,
             max: 991
@@ -45,7 +45,7 @@
         md: {
             min: 992,
             max: 1199
-        },
+        }, */
         // Large devices (large desktops)
         lg: {
             min: 1200,

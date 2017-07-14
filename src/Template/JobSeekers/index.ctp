@@ -20,32 +20,41 @@
 {
 	top:40% !important;
 }
+.margin-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.morrise-donut text {
+  font-weight:300 !important;
+  font-size:8px !important;
+}
 </style>
 <?php $this->set('title', 'Dashboard'); ?>
 
 <div class="page-header height-200 margin-bottom-30">
       <div class="margin-top-20">
-			<div style="float:left;width:50%;text-align:left;color:#000; font-size:18px;">
-				<strong><span style="font-size:22px;"><?= $job_seeker_name ?></span><br/><?= $located_city ?><br/>Android Development</strong>
+			<div class="margin-top-30" style="float:left;width:50%;text-align:left;color:#FFF; font-size:16px;">
+				<strong><span style="font-size:22px;"><?= $job_seeker_name ?></span></strong><br/><?= $located_city ?><br/>Android Development
 			</div>
+			
 			<div style="float:right;width:130px;" align="right">
 				<div class="pie-progress pie-progress-md center-block" id="performancePieApi" data-plugin="pieProgress"
 				data-barcolor="#fa7a7a" data-goal="75" aria-valuenow="75" data-size="350" data-barsize="10"
 				aria-valuemin="0" aria-valuemax="100" role="progressbar">
-					<div class="pie-progress-number" style="color:#000; font-size:20px;"><strong>75%</strong></div>
-					<div class="pie-progress-label" style="color:#000; font-size:15px;"><strong><br/>Performance<br/>Level</strong></div>
+					<div class="pie-progress-number" style="color:#FFF; font-size:20px;"><strong>75%</strong></div>
+					<div class="pie-progress-label" style="color:#FFF; font-size:15px;"><strong><br/>Performance<br/>Level</strong></div>
 				</div>
 			</div>
       </div>
     </div>
 <div class="page-content container-fluid">
       <div class="row" data-plugin="matchHeight" data-by-row="true">
-		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-4" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
-            <div class="widget-content text-center bg-white padding-40">
+            <div class="widget-content text-center bg-white padding-20">
               <div class="margin-bottom-20">
-                <b>Resume Writer</b>
+                <h4><b>Resume Writer</b></h4>
               </div>
               <p class="margin-bottom-35" style="text-align: justify;">
 			  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -57,68 +66,67 @@
           </div>
           <!-- End Panel Web Designer -->
         </div>
-		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-4" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
-            <div class="widget-content text-center bg-white padding-40">
+            <div class="widget-content text-center bg-white padding-20">
               <div class="margin-bottom-20">
-                <b>Assesments</b>
+                <h4><b>Assesments</b></h4>
               </div>
-			  <div class="example text-left max-width">
-                  <canvas id="exampleChartjsDonut" height="200"></canvas>
+			  
+			  <div class="max-width margin-auto">
+                  <div id="assesmentMorrisDonut" class="morrise-donut" style="height:200px;"></></div>
                 </div>
-				<p style="text-align: left;"><b>Upcoming Assessment</b></p>
-				<ul style="text-align: left;">
-					<ul>
-					<li>Mock-Software Development<br/>28-09-2017</li>
-					<li>Mock-Java Testing<br/>01-10-2017</li>
-					<li>Mock-Advanced Algorithm<br/>13-10-2017</li>
+				<div class="margin-auto" style="display:inline-block;">
+					<p style="text-align: left;"><b>Upcoming Assessment</b></p>
+					<ul style="text-align: left;min-width:200px;">
+						
+						<li>Mock-Software Development<br/>28-09-2017</li>
+						<li>Mock-Java Testing<br/>01-10-2017</li>
+						<li>Mock-Advanced Algorithm<br/>13-10-2017</li>
+						
 					</ul>
-				</ul>
-              
-              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:10px;">View All</button>
+					 <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:30px;">View All</button>
+				</div>
+             
             </div>
           </div>
           <!-- End Panel Web Designer -->
         </div>
-		<div class="col-xlg-3 col-lg-4 col-md-12" style="height: 536px;">
+		<div class="col-xlg-3 col-lg-4 col-md-4" style="height: 536px;">
           <!-- Panel Web Designer -->
           <div class="widget widget-shadow">
-            <div class="widget-content text-center bg-white padding-40">
+            <div class="widget-content text-center bg-white padding-20">
               <div class="margin-bottom-20">
-                <b>Jobs</b>
+                <h4><b>Jobs</b></h4>
               </div>
-			  <div class="example text-left max-width">
-                  <canvas id="recommendedChartjsDonut" height="200"></canvas>
+			  <div class="max-width margin-auto">
+				  <div id="recommendedMorrisDonut" class="morrise-donut" style="height:200px;"></div>
                 </div>
-				<p style="text-align: left;"><b>Recommended Jobs</b></p>
-				<ul style="text-align: left;">
-					<ul>
-					<li>ReactNative Developer<br/>Bangalore</li>
-					<li>Javascript Developer<br/>Chennai</li>
-					<li>SAP Expert<br/>Mumbai</li>
+				<div class="margin-auto" style="display:inline-block;">
+					<p style="text-align: left;"><b>Recommended Jobs</b></p>
+					<ul style="text-align: left;min-width:200px;">
+						
+						<li>ReactNative Developer<br/>Bangalore</li>
+						<li>Javascript Developer<br/>Chennai</li>
+						<li>SAP Expert<br/>Mumbai</li>
+						
 					</ul>
-				</ul>
+					<button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:30px;">View All</button>
+				</div>
               
-              <button type="button" class="btn padding-horizontal-40" style="background-color: rgba(77, 57, 75, 1); color:#FFF;margin-top:10px;">View All</button>
             </div>
           </div>
           <!-- End Panel Web Designer -->
         </div>
 </div>   
 </div>   
-
-<style>
-/* .dashboard .page-header {
-  background-image: url("<?php echo $this->request->webroot; ?>assets/images/dashboard2-header.jpg");
-  -webkit-background-size: cover;
-          background-size: cover;
-} */
 </style>
-<?php //echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
+<?php echo $this->Html->css('/assets/examples/css/dashboard/v2.css', ['block' => 'Dashboard2']); ?>
 <!-- Donut Chart -->
-<?php echo $this->Html->css('/assets/examples/css/charts/chartjs.css', ['block' => 'cssChart']); ?>
-<?php $this->Html->script('/assets/vendor/chart-js/Chart.js', ['block' => 'jsChart']); ?>
+<?php echo $this->Html->css('/assets/vendor/morris-js/morris.css', ['block' => 'cssChart']); ?>
+<?php $this->Html->script('/assets/vendor/raphael/raphael-min.js', ['block' => 'jsChart']); ?>
+<?php $this->Html->script('/assets/vendor/morris-js/morris.min.js', ['block' => 'jsChart']); ?>
 
 <!--  Pi Chart ---->
 <?php $this->Html->css('/assets/vendor/aspieprogress/asPieProgress.css', ['block' => 'cssPiChart']); ?>

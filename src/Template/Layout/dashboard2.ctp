@@ -28,7 +28,7 @@
 	<!-- Page -->
 	<?= $this->fetch('cssChart')?>
 	<?= $this->fetch('cssPiChart')?>
-	
+	<?= $this->fetch('Dashboard2')?>
 	<!-- Fonts -->
 	<?php echo $this->Html->css('/assets/fonts/web-icons/web-icons.min.css'); ?>
 	<?php echo $this->Html->css('/assets/fonts/brand-icons/brand-icons.min.css'); ?>
@@ -39,7 +39,11 @@
 	<style>
 	.site-menubar-unfold .site-menu > .site-menu-item > a .site-menu-title {
     font-size: 14px;
-    color: #504d4d;
+    color: #FFF;
+}
+.site-menubar-unfold .site-menu>.site-menu-item>a {
+    
+    line-height: 65px !important;
 }
 
 	</style>
@@ -209,12 +213,12 @@
     </div>
 
   </nav>
-  <div class="site-menubar site-menubar-light">
+  <div class="site-menubar">
     <div class="site-menubar-body">
       <div>
         <div>
           <ul class="site-menu">
-			<li class="site-menu-item btn-gradient ">
+			<li class="site-menu-item">
               <a href="#" data-slug="dashboard">
                 <?php echo $this->Html->image('/img/dashboard.png',['class'=>'site-menu-icon wb-dashboard','aria-hidden'=>'true']); ?>
                 <span class="site-menu-title" style="color:#FFF;">Dashboard</span>

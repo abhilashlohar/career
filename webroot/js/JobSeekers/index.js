@@ -9,7 +9,46 @@
   $(document).ready(function($) {
     Site.run();
   });
-	// Example Chartjs Line
+  // Example Morris Donut
+  // --------------------
+  (function() {
+    Morris.Donut({
+      element: 'assesmentMorrisDonut',
+      data: [{
+        label: "\xa0 Recommended \xa0",
+        value: 35
+      }, {
+        label: "\xa0 \xa0 Completed \xa0 \xa0",
+        value: 48
+      }, {
+        label: "\xa0 \xa0 UpComing \xa0 \xa0",
+        value: 22
+      }, ],
+      // barSizeRatio: 0.35,
+      resize: true,
+      colors: ["#8CD3A5", "#626262", "#045B93"]
+    });
+  })();
+  (function() {
+    Morris.Donut({
+      element: 'recommendedMorrisDonut',
+      data: [{
+        label: "\xa0 \xa0 Available \xa0 \xa0",
+        value: 35
+      }, {
+        label: "\xa0 Recommended \xa0",
+        value: 48
+      }, {
+        label: "\xa0 \xa0 Applied \xa0 \xa0",
+        value: 22
+      }, ],
+      // barSizeRatio: 0.35,
+      resize: true,
+     colors: ["#8CD3A5", "#626262", "#045B93"]
+    });
+  })();
+
+	/*  Example Chartjs Line
 	Chart.defaults.global.responsive = true;
 	(function() {
     var doughnutDatas = [{
@@ -28,7 +67,7 @@
 
     var myDoughnut = new Chart(document.getElementById("exampleChartjsDonut").getContext("2d")).Doughnut(doughnutDatas);
 	
-  })();
+  })(); 
   (function() {
     var doughnutData = [{
       value: 40,
@@ -46,7 +85,7 @@
 
     var myDoughnut = new Chart(document.getElementById("recommendedChartjsDonut").getContext("2d")).Doughnut(doughnutData);
 	
-  })();
+  })();*/
   // Example Api Methods
   // -------------------
   (function() {
