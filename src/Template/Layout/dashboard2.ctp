@@ -45,6 +45,9 @@
     
     line-height: 65px !important;
 }
+.site-menubar {
+    background: #1e2123 !important;
+}
 
 	</style>
 	<?php echo $this->Html->script('/assets/vendor/modernizr/modernizr.js'); ?>
@@ -60,7 +63,7 @@
 
 	<nav class="site-navbar navbar navbar-default navbar-fixed-top navbar-mega bg-grey-600" role="navigation">
 
-    <div class="navbar-header" style="background-color:#000;">
+    <div class="navbar-header" style="background-color:#191717;">
       <button type="button" class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
       data-toggle="menubar">
         <span class="sr-only">Toggle navigation</span>

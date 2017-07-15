@@ -8,7 +8,7 @@
  
   // Example Validataion Standard Mode
   // ---------------------------------
-  (function() {
+ /*  (function() {
     $('#loginform').formValidation({
       framework: "bootstrap",
       button: {
@@ -39,5 +39,5 @@
         }
       }
     });
-  })();
+  })(); */
 })(document, window, jQuery);

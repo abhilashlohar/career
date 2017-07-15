@@ -2,11 +2,15 @@
 .help-block{
 	color:#FFF !important;
 }
+.trans{
+	background-color: rgba(0, 0, 0, 0.58);
+	border-radius: 20px;
+}
 </style>
 <?php $this->set('title', 'Signup'); ?>
 <div class="page animsition vertical-align text-center" data-animsition-in="fade-in"
 data-animsition-out="fade-out">
-	<div class="page-content vertical-align-middle">
+	<div class="page-content vertical-align-middle trans">
 	  <div class="brand">
 		<?php echo $this->Html->image('/img/logo.png'); ?>
 		<h2 class="brand-text">Entry Hires</h2>
