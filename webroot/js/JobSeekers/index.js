@@ -21,7 +21,7 @@
         label: "\xa0 \xa0 Completed \xa0 \xa0",
         value: 48
       }, {
-        label: "\xa0 \xa0 UpComing \xa0 \xa0",
+        label: "\xa0 \xa0 \xa0 UpComing \xa0 \xa0 \xa0",
         value: 22
       }, ],
       // barSizeRatio: 0.35,
@@ -33,13 +33,13 @@
     Morris.Donut({
       element: 'recommendedMorrisDonut',
       data: [{
-        label: "\xa0 \xa0 Available \xa0 \xa0",
+        label: "\xa0 \xa0 \xa0 Available \xa0 \xa0 \xa0",
         value: 35
       }, {
         label: "\xa0 Recommended \xa0",
         value: 48
       }, {
-        label: "\xa0 \xa0 Applied \xa0 \xa0",
+        label: "\xa0 \xa0 \xa0 \xa0 Applied \xa0 \xa0 \xa0 \xa0",
         value: 22
       }, ],
       // barSizeRatio: 0.35,
