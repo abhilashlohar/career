@@ -21,6 +21,9 @@ class CorporateUsersController extends AppController
 	public function initialize()
 	{
 		parent::initialize();
+		$full_name=$this->Auth->User('full_name');
+		$corporate_name=$this->Auth->User('corporate_name');
+		$this->set(compact('full_name','corporate_name'));
 		$this->Auth->allow(['logout']);
 	}
 	public function beforeFilter(Event $event)
@@ -59,7 +62,7 @@ class CorporateUsersController extends AppController
      */
     public function index()
     {
-		$this->viewBuilder()->layout('blank');
+		$this->viewBuilder()->layout('corporate_dashboard');
 		
         $corporateUsers = $this->paginate($this->CorporateUsers);
 
@@ -96,7 +99,9 @@ class CorporateUsersController extends AppController
         $corporateUser = $this->CorporateUsers->newEntity();
         if ($this->request->is('post')) {
             $corporateUser = $this->CorporateUsers->patchEntity($corporateUser, $this->request->getData());
-            if ($this->CorporateUsers->save($corporateUser)) {
+            if ($corporateUser_data=$this->CorporateUsers->save($corporateUser)) {
+				$this->Auth->setUser($corporateUser_data);
+                $this->Flash->success(__('The corporate registration has been done.'));
                 $this->Flash->success(__('You have successfully registered.'));
 
                 return $this->redirect(['action' => 'login']);
