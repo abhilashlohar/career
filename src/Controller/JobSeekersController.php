@@ -8,6 +8,7 @@ use Cake\View\View;
 use Cake\ORM\TableRegistry;
 use Cake\Validation\Validation;
 use Cake\Routing\Router;
+use Cake\Mailer\Email;
 
 /**
  * JobSeekers Controller
@@ -32,7 +33,7 @@ class JobSeekersController extends AppController
         // Allow users to register and logout.
         // You should not add the "login" action to allow list. Doing so would
         // cause problems with normal functioning of AuthComponent.
-        $this->Auth->allow([ 'logout', 'login', 'add', 'checkExistEmail']);
+        $this->Auth->allow([ 'logout', 'login', 'add', 'checkExistEmail', 'forgotPassword', 'resetPassword','sendResetEmail']);
     }
 	
 	public function logout()
@@ -167,5 +168,87 @@ class JobSeekersController extends AppController
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+	////////////////  Forget Password  ////////////////////////////
+	public function forgotPassword()
+    {
+		$this->viewBuilder()->layout('signup');
+        if ($this->request->is('post')) {
+			
+            $query = $this->JobSeekers->findByEmail($this->request->data['email']);
+            $user = $query->first();
+			
+            if (is_null($user)) {
+                $this->Flash->error('Email address does not exist. Please try again');
+            } else {
+				
+                $passkey = uniqid();
+                $url = Router::Url(['controller' => 'JobSeekers', 'action' => 'reset_password'], true) . '/' . $passkey;
+                $timeout = time() + DAY;
+                 if ($this->JobSeekers->updateAll(['passkey' => $passkey, 'timeout' => $timeout], ['id' => $user->id])){
+					
+                    $this->sendResetEmail($url, $user);
+					
+                    $this->redirect(['action' => 'login']);
+                } else {
+                    $this->Flash->error('Error saving reset passkey/timeout');
+                }
+            }
+        }
+    }
+
+    private function sendResetEmail($url, $user) {
+		
+			$email = new Email();
+			$email->transport('SendGrid');
+			$email->profile('default')
+			->template('resetpw')
+			->emailFormat('html');
+
+			$email->from(['ucciudaipur@gmail.com' => 'UCCI'])
+			->to($user->email, $user->member_name)
+			->subject('UCCI - Reset your password')
+			->viewVars(['url' => $url, 'email' => $user->email]);
+
+     if ($email->send()) {
+		  
+            $this->Flash->success(__('Check your email for your reset password link'));
+        } else {
+            $this->Flash->error(__('Error sending email: ') . $email->smtpError);
+        }  
+      
+    }
+
+    public function resetPassword($passkey = null) {
+		$this->viewBuilder()->layout('login_layout');
+        if ($passkey) {
+            $query = $this->JobSeekers->find('all', ['conditions' => ['passkey' => $passkey, 'timeout >' => time()]]);
+            $user = $query->first();
+			
+			
+            if ($user) {
+                if (!empty($this->request->data)) {
+                    // Clear passkey and timeout
+                    $this->request->data['passkey'] = null;
+                    $this->request->data['timeout'] = null;
+                    $user = $this->JobSeekers->patchEntity($user, $this->request->data);
+                    if ($this->JobSeekers->save($user)) {
+                        //$this->Flash->success(__('Your password has been updated.'));
+                        $this->Auth->setUser($user);
+						return $this->redirect(['controller'=>'JobSeekers','action' => 'index']);
+						
+                    } else {
+                        $this->Flash->error(__('The password could not be updated. Please, try again.'));
+                    }
+                }
+            } else {
+                $this->Flash->error('Invalid or expired passkey. Please check your email or try again');
+                $this->redirect(['action' => 'forgot_password']);
+            }
+            unset($user->password);
+            $this->set(compact('user'));
+        } else {
+            $this->redirect('/');
+        }
     }
 }

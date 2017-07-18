@@ -29,6 +29,7 @@ data-animsition-out="fade-out">
 		<?= $this->Form->button(__('Login'),['class'=>'btn btn-gradient btn-block']) ?>
 	  <?= $this->Form->end() ?>
 		<p>Still no account? Please go to <?php echo $this->Html->link('Register', array('controller' => 'JobSeekers', 'action' => 'add'));  ?></p>
+		<p><?php  echo $this->Html->link("Forgot your password?<br/>", array('controller' => 'JobSeekers', 'action' => 'forgot_password'),['class' => '','style'=>'text-align:left;width:100%;','escape'=>false]); ?></p>
 		
 	  <footer class="page-copyright page-copyright-inverse">
 		<p>© 2017 Entry Hires.</p>
